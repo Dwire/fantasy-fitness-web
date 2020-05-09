@@ -1,0 +1,33 @@
+/* body {
+  background: blue;
+} */
+
+.league-dash-container {
+  display: inline-grid;
+  width: 95%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.column {
+  border: 1px solid black;
+}
+
+.col-1 {
+  grid-column: span 4;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-4 {
+  grid-column: span 3;
+}
+
+.col-5 {
+  grid-column: span 6;
+}

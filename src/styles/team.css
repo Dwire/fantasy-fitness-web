@@ -1,0 +1,12 @@
+.teamate-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-bottom: 20px
+}
+
+.teamate {
+  background-color: grey;
+  min-width: 100px;
+  border: 1px solid black;
+}
