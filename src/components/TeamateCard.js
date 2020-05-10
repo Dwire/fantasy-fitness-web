@@ -1,10 +1,12 @@
 import React from 'react'
 
 
-const TeamateCard = ({playerName}) => {
+const TeamateCard = ({player}) => {
   return (
-    <div class='teamate'>
-      <h5>{playerName}</h5>
+    <div className='teamate'>
+      <h5>{player.username}</h5>
+      <h5>{player.first_name}</h5>
+      <h5>{player.last_name}</h5>
     </div>
   )
 }

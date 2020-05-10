@@ -3,7 +3,7 @@ import Teamates from '../components/Teamates'
 
 const Team = () => {
   return (
-    <div class='column col-3'>
+    <div className='column col-3'>
       <Teamates />
     </div>
   )
