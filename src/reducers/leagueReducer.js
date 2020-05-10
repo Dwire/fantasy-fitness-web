@@ -8,7 +8,9 @@ export const userReducer = (state = leagueState, action) => {
       // debugger
       const allLeagues = action.payload.data.attributes.leagues
       const currentLeague = action.payload.data.attributes.leagues[0]
-      return {...state, allLeagues, currentLeague}
+      const currentTeam = currentLeague.teams.find(team => team.teammates.find(teammate => teammate.id === parseInt(action.payload.data.id)))
+      
+      return {...state, allLeagues, currentLeague, currentTeam}
     case SET_CURRENT_LEAGUE:
       return action.payload
     default:

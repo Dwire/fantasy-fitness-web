@@ -1,18 +1,20 @@
-.teammate-container {
+.challenge-container {
+  margin-top: 10px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-bottom: 20px
 }
 
-.teammate-card {
+.challenge-card {
   background-color: lightgrey;
-  width: 28%;
+  width: 20%;
   min-width: 100px;
+  margin: 5px;
   border-radius: 25px;
   border: 1px solid grey;
 }
 
-.teammate-card img {
+.challenge-card img {
   max-width: 100px;
 }

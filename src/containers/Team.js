@@ -1,10 +1,10 @@
 import React from 'react'
-import Teamates from '../components/Teamates'
+import Teammates from '../components/Teammates'
 
 const Team = () => {
   return (
     <div className='column col-3'>
-      <Teamates />
+      <Teammates />
     </div>
   )
 }
