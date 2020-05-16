@@ -10,6 +10,8 @@ const ChallengeCard = ({challenge}) => {
       <p>Category: {challenge.workout.category}</p>
       <p>Points: {challenge.workout.default_points}</p>
       <img src={challenge.workout.image_url} alt="workout"/>
+      <p>Status: Unclaimed</p>    
+      <button>Claim</button>
     </div>
   )
 }
