@@ -2,7 +2,7 @@ import { SET_INITIAL_STATE, SET_CURRENT_LEAGUE } from '../actions/actionTypes'
 
 const leagueState = {allLeagues: [], currentLeague: {teams: []}}
 
-export const userReducer = (state = leagueState, action) => {
+const userReducer = (state = leagueState, action) => {
   switch (action.type) {
     case SET_INITIAL_STATE:
       // debugger

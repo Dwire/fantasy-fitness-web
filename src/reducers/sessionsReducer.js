@@ -2,7 +2,7 @@ import { SET_LOGIN, SET_INITIAL_STATE } from '../actions/actionTypes'
 
 const sessionsState = {loggedIn: false}
 
-export const sessionsReducer = (state = sessionsState, action) => {
+const sessionsReducer = (state = sessionsState, action) => {
   switch (action.type) {
     case SET_INITIAL_STATE:
       return {...state, loggedIn: true}

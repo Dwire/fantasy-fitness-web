@@ -10,6 +10,9 @@ export const SET_USER = 'SET_USER'
 // League Reducer 
 export const SET_CURRENT_LEAGUE = 'SET_CURRENT_LEAGUE'
 
+// Completion Reducer 
+export const SET_CURRENT_COMPLETION_AND_USER = 'SET_CURRENT_COMPLETION_AND_USER'
+
 
 // BookClub Reducer
 // export const SET_BOOK_CLUB = 'SET_BOOK_CLUB'
