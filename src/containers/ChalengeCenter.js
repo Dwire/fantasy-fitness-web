@@ -7,7 +7,6 @@ const ChallengeCenter = ({selectedPack}) => {
 
   const displayChallenges = () => {
     if (selectedPack){
-      debugger
       return selectedPack.workouts.map(challenge => <ChallengeCard challenge={challenge} />) 
     }
   }
