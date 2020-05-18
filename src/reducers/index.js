@@ -3,7 +3,7 @@ import { combineReducers } from 'redux'
 import userReducer from './userReducer'
 import sessionsReducer from './sessionsReducer'
 import leagueReducer from './leagueReducer'
-import completionReducer from './completionReducer'
+import teamReducer from './teamReducer'
 
 // import settingsAndFormReducer from './settingsAndFormReducer'
 
@@ -11,7 +11,7 @@ export default combineReducers({
   // auth: authReducer
   user: userReducer,
   leagues: leagueReducer,
-  completions: completionReducer,
+  teams: teamReducer,
   // bookClub: bookClubReducer,
   session: sessionsReducer,
   // settingsAndFormReducer: settingsAndFormReducer

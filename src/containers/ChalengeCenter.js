@@ -46,7 +46,8 @@ const ChallengeCenter = ({selectedPack, currentTeam}) => {
 const mapStateToProps = (state) => {
   return {
     selectedPack: state.leagues.currentLeague.selected_pack,
-    currentTeam: state.leagues.currentTeam 
+    // currentTeam: state.leagues.currentTeam 
+    currentTeam: state.teams.currentTeam 
   }
 }
 

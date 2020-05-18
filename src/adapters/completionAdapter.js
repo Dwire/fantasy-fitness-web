@@ -19,7 +19,16 @@ const completionAdapter = {
       'Authorization': token
     } 
   })
-  .then(res => res.json())
+  .then(res => res.json()),
+  update: (token, completionData, completionId) => fetch(`${BASE_URL}/${completionId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': token
+    },
+    body: JSON.stringify(completionData)
+  }).then(res => res.json())
 }
 
 export default completionAdapter

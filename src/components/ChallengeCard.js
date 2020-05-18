@@ -1,17 +1,23 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 
 import completionAdapter from '../adapters/completionAdapter'
-// import {setCurrentCompletionAndUser} from '../actions/completionActions'
+import {updateTeamCompletion} from '../actions/teamActions'
 
-const ChallengeCard = ({challenge, user, currentLeague, currentTeam, selectedPack, completionUser, completion, workout}) => {
-  console.log("WORK", challenge)
+const ChallengeCard = ({challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
+  
   const handleChange = (e) => {
     let token = localStorage.getItem("jwt")
-    
+
     if (e.target.value === "open"){
-      let completionId = parseInt(e.target.id)
-      deleteCompletion(token, completionId)
+      if (e.target.id) {
+        let completionId = parseInt(e.target.id)
+        deleteCompletion(token, completionId)
+      } 
+    }else if(e.target.id) {
+      let completionId = e.target.id
+      let completionStatus = e.target.value
+      updateCompletion(token, completionStatus, completionId)
     }else{
       createCompletion(token, e)
     }
@@ -20,7 +26,19 @@ const ChallengeCard = ({challenge, user, currentLeague, currentTeam, selectedPac
   const deleteCompletion = (token, completionId) => {
     completionAdapter.delete(token, completionId).then(console.log)
   }
-  
+  const updateCompletion = (token, completionStatus, completionId) => {
+    let completionData = {
+      user_id: parseInt(user.id),
+      team_id: currentTeam.id,
+      league_pack_id: selectedPack.id,
+      workout_pack_id: challenge.workout_pack_id,
+      workout_id: challenge.workout.id,
+      status: completionStatus
+    }
+
+    completionAdapter.update(token, completionData, completionId)
+    .then(updateTeamCompletion)
+  }
   const createCompletion = (token, e) => {
     let completionData = {
       user_id: parseInt(user.id),
@@ -60,8 +78,8 @@ const mapStateToProps = (state) => {
     user: state.user,
     currentLeague: state.leagues.currentLeague,
     selectedPack: state.leagues.currentLeague.selected_pack,
-    currentTeam: state.leagues.currentTeam,
+    currentTeam: state.teams.currentTeam,
   }
 }
 
-export default connect(mapStateToProps, null)(ChallengeCard)
+export default connect(mapStateToProps, {updateTeamCompletion})(ChallengeCard)
