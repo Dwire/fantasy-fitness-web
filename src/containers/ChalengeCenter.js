@@ -16,7 +16,6 @@ const ChallengeCenter = ({selectedPack, currentTeam}) => {
       return completion.workout_pack_id === workout.workout_pack_id
     })
     
-    
     if (completion) {
       return addUserToWorkoutAndCompletion(completion, workout)
     }else{

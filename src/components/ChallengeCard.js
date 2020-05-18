@@ -2,9 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import completionAdapter from '../adapters/completionAdapter'
-import {updateTeamCompletion} from '../actions/teamActions'
+import {updateTeamCompletion, deleteTeamCompletion, createTeamCompletion} from '../actions/teamActions'
 
-const ChallengeCard = ({challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
+const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
   
   const handleChange = (e) => {
     let token = localStorage.getItem("jwt")
@@ -19,13 +19,16 @@ const ChallengeCard = ({challenge, user, updateTeamCompletion, currentLeague, cu
       let completionStatus = e.target.value
       updateCompletion(token, completionStatus, completionId)
     }else{
-      createCompletion(token, e)
+      let completionStatus = e.target.value
+      createCompletion(token, completionStatus)
     }
   }
   
   const deleteCompletion = (token, completionId) => {
-    completionAdapter.delete(token, completionId).then(console.log)
+    completionAdapter.delete(token, completionId)
+    .then(() => deleteTeamCompletion(completionId))
   }
+
   const updateCompletion = (token, completionStatus, completionId) => {
     let completionData = {
       user_id: parseInt(user.id),
@@ -39,16 +42,20 @@ const ChallengeCard = ({challenge, user, updateTeamCompletion, currentLeague, cu
     completionAdapter.update(token, completionData, completionId)
     .then(updateTeamCompletion)
   }
-  const createCompletion = (token, e) => {
+
+  const createCompletion = (token, completionStatus) => {
     let completionData = {
       user_id: parseInt(user.id),
       team_id: currentTeam.id,
       league_pack_id: selectedPack.id,
       workout_pack_id: challenge.workout_pack_id,
       workout_id: challenge.workout.id,
-      status: e.target.value 
+      status: completionStatus
     }
-    completionAdapter.create(token, completionData).then(console.log)
+    
+    completionAdapter.create(token, completionData)
+    .then(createTeamCompletion)
+    // .then(console.log)
   }
 
 
@@ -82,4 +89,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {updateTeamCompletion})(ChallengeCard)
+export default connect(mapStateToProps, {updateTeamCompletion, deleteTeamCompletion, createTeamCompletion})(ChallengeCard)
