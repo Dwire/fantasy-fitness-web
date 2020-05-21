@@ -17,17 +17,30 @@ const userReducer = (state = teamState, action) => {
         return completion
       })
       let newCurrentTeam = {...state.currentTeam, completions: completionList}
-      return {...state, currentTeam: newCurrentTeam}
+      let allTeamsPlusUpdatedCompletion = state.allTeams.map(team => team.id === newCurrentTeam.id ? newCurrentTeam : team)
+      return {...state, 
+        currentTeam: newCurrentTeam, 
+        allTeams: allTeamsPlusUpdatedCompletion
+      }
     case DELETE_TEAM_COMPLETION:
       let completions = state.currentTeam.completions.filter(completion => {
         return completion.id !== action.payload
       })
       let currentTeamMinusCompletion = {...state.currentTeam, completions: completions}
-      return {...state, currentTeam: currentTeamMinusCompletion}
+      let allTeamsMinusCompletion = state.allTeams.map(team => team.id === currentTeamMinusCompletion.id ? currentTeamMinusCompletion : team)
+      return {...state, 
+        currentTeam: currentTeamMinusCompletion,
+        allTeams: allTeamsMinusCompletion
+      }
     case ADD_TEAM_COMPLETION:
       let addedCompletion = [...state.currentTeam.completions, action.payload]
       let teamPlusCompletion = {...state.currentTeam, completions: addedCompletion}
-      return {...state, currentTeam: teamPlusCompletion}
+      let allTeamsPlusCompletion = state.allTeams.map(team => team.id === teamPlusCompletion.id ? teamPlusCompletion : team)
+      
+      return {...state, 
+        currentTeam: teamPlusCompletion, 
+        allTeams: allTeamsPlusCompletion
+        }
     default:
       return state
   }
