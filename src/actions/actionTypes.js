@@ -6,10 +6,10 @@ export const SET_INITIAL_STATE = 'SET_INITIAL_STATE'
 // User Reducer
 export const SET_USER = 'SET_USER'
 
-
 // League Reducer 
 export const SET_CURRENT_LEAGUE = 'SET_CURRENT_LEAGUE'
 export const ADD_LEAGUE_MESSAGE = 'ADD_LEAGUE_MESSAGE'
+
 
 // TEAM Reducer 
 export const SET_CURRENT_TEAM = 'SET_CURRENT_TEAM'

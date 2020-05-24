@@ -43,10 +43,10 @@ class MessageInput extends Component  {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type='text' name='content' value={this.state.content} onChange={this.handleChange} />
+        <form className='message-input-form' onSubmit={this.handleSubmit}>
+          <input className='message-input-box' type='text' name='content' value={this.state.content} onChange={this.handleChange} />
 
-          <input type='submit'/>
+          <input className="message-input-button" type='submit'/>
         </form>
       </div>
     )
