@@ -47,7 +47,7 @@ const userReducer = (state = teamState, action) => {
       let addedMessage = [state.currentTeam.messages, ...action.payload]
       let teamPlusMessage = {...state.currentTeam, messages: addedMessage}
       let allTeamsPlusMessage = state.allTeams.map(team => team.id === teamPlusMessage.id ? teamPlusMessage : team)
-        debugger
+  
       return {...state, 
         currentTeam: teamPlusMessage, 
         allTeams: allTeamsPlusMessage

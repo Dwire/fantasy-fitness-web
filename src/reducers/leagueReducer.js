@@ -1,4 +1,5 @@
-import { SET_INITIAL_STATE, SET_CURRENT_LEAGUE } from '../actions/actionTypes'
+import { SET_INITIAL_STATE, SET_CURRENT_LEAGUE, ADD_LEAGUE_MESSAGE } from '../actions/actionTypes'
+import { bindActionCreators } from 'redux'
 
 const leagueState = {allLeagues: [], currentLeague: {teams: []}}
 
@@ -12,7 +13,16 @@ const userReducer = (state = leagueState, action) => {
       
       return {...state, allLeagues, currentLeague}
     case SET_CURRENT_LEAGUE:
-      return action.payload
+      return {...state,  currentLeague: bindActionCreators.payload}
+    case ADD_LEAGUE_MESSAGE:
+    let addedMessage = [state.currentLeague.messages, ...action.payload]
+    let leaguePlusMessage = {...state.currentLeague, messages: addedMessage}
+    let allLeaguesPlusMessage = state.allLeagues.map(league => league.id === leaguePlusMessage.id ? leaguePlusMessage : league)
+
+    return {...state, 
+      currentLeague: leaguePlusMessage, 
+      allLeagues: allLeaguesPlusMessage
+      }
     default:
       return state
   }

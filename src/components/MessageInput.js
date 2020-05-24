@@ -5,7 +5,7 @@ import teamMessageAdapter from '../adapters/teamMessageAdapter'
 import leagueMessageAdapter from '../adapters/leagueMessageAdapter'
 
 import {createTeamMessage} from '../actions/teamActions'
-// import {leagueTeamMessage} from '../actions/leagueActions'
+import {createLeagueMessage} from '../actions/leagueActions'
 
 
 class MessageInput extends Component  {
@@ -37,7 +37,7 @@ class MessageInput extends Component  {
   createLeagueMessage = () => {
     const leagueMessageData = {...this.state, league_id: this.props.currentLeague.id}
     leagueMessageAdapter.create(leagueMessageData)
-    // .then(send to reducer)
+    .then(this.props.createLeagueMessage)
   }
 
   render() {
@@ -56,8 +56,8 @@ class MessageInput extends Component  {
 const mapStateToProps = (state) => {
   return {
     currentTeam: state.teams.currentTeam,
-    currentLeague: state.leagues.currentLeage
+    currentLeague: state.leagues.currentLeague
   }
 }
 
-export default connect(mapStateToProps, {createTeamMessage} )(MessageInput)
+export default connect(mapStateToProps, {createTeamMessage, createLeagueMessage} )(MessageInput)
