@@ -1,4 +1,4 @@
-import { SET_INITIAL_STATE, UPDATE_TEAM_COMPLETION, DELETE_TEAM_COMPLETION, ADD_TEAM_COMPLETION } from '../actions/actionTypes'
+import { SET_INITIAL_STATE, UPDATE_TEAM_COMPLETION, DELETE_TEAM_COMPLETION, ADD_TEAM_COMPLETION, ADD_TEAM_MESSAGE, SET_CURRENT_TEAM } from '../actions/actionTypes'
 
 const teamState = {allTeams: [], currentTeam: {}}
 
@@ -9,6 +9,8 @@ const userReducer = (state = teamState, action) => {
       const allTeams = action.payload.data.attributes.leagues[0].teams
       const currentTeam = action.payload.data.attributes.leagues[0].teams.find(team => team.teammates.find(teammate => teammate.id === parseInt(action.payload.data.id)))
       return {...state, currentTeam, allTeams}
+    case SET_CURRENT_TEAM:
+        return {...state, currentTeam: action.payload}
     case UPDATE_TEAM_COMPLETION:
       let completionList = state.currentTeam.completions.map(completion => {
         if (completion.id === action.payload.id){
@@ -41,9 +43,30 @@ const userReducer = (state = teamState, action) => {
         currentTeam: teamPlusCompletion, 
         allTeams: allTeamsPlusCompletion
         }
+    case ADD_TEAM_MESSAGE:
+      let addedMessage = [state.currentTeam.messages, ...action.payload]
+      let teamPlusMessage = {...state.currentTeam, messages: addedMessage}
+      let allTeamsPlusMessage = state.allTeams.map(team => team.id === teamPlusMessage.id ? teamPlusMessage : team)
+        debugger
+      return {...state, 
+        currentTeam: teamPlusMessage, 
+        allTeams: allTeamsPlusMessage
+        }
     default:
       return state
   }
 }
 
 export default userReducer
+
+
+
+
+
+
+
+
+
+
+// currentTeam should hold everything. All teams should just be a refrence 
+// I should not be setting state on currentTeam and again on the same time in the allTeams array.

@@ -1,4 +1,12 @@
-import { UPDATE_TEAM_COMPLETION, DELETE_TEAM_COMPLETION, ADD_TEAM_COMPLETION } from './actionTypes'
+import {SET_CURRENT_TEAM, UPDATE_TEAM_COMPLETION, DELETE_TEAM_COMPLETION, ADD_TEAM_COMPLETION, ADD_TEAM_MESSAGE } from './actionTypes'
+
+
+export const setCurrentTeam = (team) => {
+  return {
+    type: SET_CURRENT_TEAM,
+    payload: team
+  }
+}
 
 export const updateTeamCompletion = (completion) => {
   return {
@@ -18,5 +26,12 @@ export const createTeamCompletion = (completion) => {
   return {
     type: ADD_TEAM_COMPLETION,
     payload: completion
+  }
+}
+
+export const createTeamMessage = (messageArray) => {
+  return {
+    type: ADD_TEAM_MESSAGE,
+    payload: messageArray
   }
 }

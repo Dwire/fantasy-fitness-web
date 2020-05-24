@@ -6,7 +6,7 @@ import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'rech
 
 
 const LeagueStandings = ({teams}) => {
-  debugger
+  
   const team_total_completions = () => {
     return teams.map(team => completion_info(team))
   }

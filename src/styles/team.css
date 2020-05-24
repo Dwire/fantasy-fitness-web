@@ -16,3 +16,31 @@
 .teammate-card img {
   max-width: 100px;
 }
+
+.team-container {
+  display: inline-grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.team-col-1 {
+  grid-column: span 1;
+}
+
+.team-col-2 {
+  grid-column: span 12;
+
+}
+
+.team-col-3 {
+  grid-column: span 1;
+}
+
+.team-left:hover {
+  background-color: blue;
+  /* height: 100%; */
+}
+
+.team-right:hover  {
+  background-color: red;
+} 

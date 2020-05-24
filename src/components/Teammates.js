@@ -26,7 +26,7 @@ const Teammates = ({user_id, selectedPack, currentTeam}) => {
   }
 
   return (
-    <div>
+    <div className='team-col-2'>
       <h4>Team: {currentTeam ? currentTeam.name : "No Teammates"}</h4>
       <p>Motto: {currentTeam ? currentTeam.motto : "No Motto"} </p>
       <div className='teammate-container'>
