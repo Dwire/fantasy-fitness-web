@@ -5,6 +5,8 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 // import Register from '../containers/landing/Register'
 // import Sessions from '../containers/landing/Sessions'
 // import SplashPage from '../containers/landing/SplashPage'
+import Auth from '../components/Auth'
+import LandingPage from '../containers/LandingPage'
 import LeagueDash from '../containers/LeagueDash'
 
 
@@ -18,7 +20,9 @@ class Routes extends React.Component {
         {/* <Route exact path="/sessions" component={Sessions} /> */}
         {/* <Route exact path="/login" component={Login} /> */}
         {/* <Route exact path="/register" component={Register} /> */}
+        <Route path="/home" component={LandingPage} />
         <Route path="/dashboard" component={LeagueDash} />
+        <Route path="/auth" component={Auth} />
       </Switch>
     )
   }

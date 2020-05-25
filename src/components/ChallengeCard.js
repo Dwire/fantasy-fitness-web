@@ -5,7 +5,7 @@ import completionAdapter from '../adapters/completionAdapter'
 import {updateTeamCompletion, deleteTeamCompletion, createTeamCompletion} from '../actions/teamActions'
 
 const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
-  
+  // debugger
   const handleChange = (e) => {
     let token = localStorage.getItem("jwt")
 
@@ -58,9 +58,19 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
     // .then(console.log)
   }
 
+  const checkWorkoutOwner = () => {
+    // debugger
+    if (challenge.completionUser && challenge.completionUser.id === parseInt(user.id)){
+      return true 
+    }else if (!challenge.completionUser){
+      return true 
+    }else{
+     return false 
+    }
+  }
 
-    return (
-      <div className='challenge-card'>
+  return (
+    <div className='challenge-card'>
       <h4>{challenge.workout.name}</h4>
       {/* <p>Description: {challenge.workout.description}</p> */}
       <p>{challenge.workout.category}</p>
@@ -68,14 +78,19 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
       <img src={challenge.workout.image_url} alt="workout"/>
       <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
       <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
-      <select 
-      id={challenge.completion ? challenge.completion.id: null} 
-      onChange={handleChange}
-      value={challenge.completion ? challenge.completion.status : "open"}>
-        <option value="open">Open</option>
-        <option value="claimed">Claimed</option>
-        <option value="completed">Completed</option>
-      </select>
+
+      {checkWorkoutOwner() ? 
+        <select 
+        id={challenge.completion ? challenge.completion.id: null} 
+        onChange={handleChange}
+        value={challenge.completion ? challenge.completion.status : "open"}>
+          <option value="open">Open</option>
+          <option value="claimed">Claimed</option>
+          <option value="completed">Completed</option>
+        </select>
+      :
+        null
+      }
     </div>
   )
 }
