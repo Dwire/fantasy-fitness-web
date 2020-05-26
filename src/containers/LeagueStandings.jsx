@@ -21,7 +21,7 @@ const LeagueStandings = ({teams}) => {
 
   return (
     <div className='column col-1'>
-      <BarChart width={730} height={250} data={team_total_completions()}>
+      <BarChart className='bar-chart' width={730} height={250} data={team_total_completions()}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

@@ -8,6 +8,8 @@ import Team from './Team'
 import ChallengeCenter from './ChalengeCenter'
 import MessageBoard from './MessageBoard'
 
+import SideNav from '../components/SideNav'
+
 
 class LeagueDash extends Component {
 
@@ -18,7 +20,8 @@ class LeagueDash extends Component {
   render() {
     return (
       <div>
-        <div className="league-dash-container">
+          <SideNav />
+        <div className="league-dash-container main-container">
           <LeagueStandings />
           <LeagueHighlights />
           <Team />

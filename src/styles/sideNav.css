@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/* $nav-bg :#ef5934; */
+body {
+  background: #effcff;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+header {
+  background: #acdae7;
+  height: 50px;
+  overflow: auto;
+}
+
+.slidenav {
+  position: fixed;
+  height: 100%;
+  background: cadetblue;
+  width: 150px;
+  transition: all 0.2s 0.1s;
+  margin-left: -150px;
+}
+.slidenav.open {
+  margin-left: 0;
+}
+
+aside {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  border-bottom: 1px solid #d3dec7;
+  padding: 5px;
+  transition: all 0.5s 0.1s;
+}
+nav ul li:hover {
+  background: #8884D8;
+  transition: all 0.5s 0.1s;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #222;
+  display: block;
+  margin: 0 10px;
+  padding: 20px 10px;
+}
+
+.main-container {
+  padding: 50px;
+}
+
+.menu {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 30px;
+  margin: 10px 0 0 10px;
+}
+
+.menu span {
+  margin: 0px auto;
+  position: relative;
+  top: 12px;
+}
+
+.menu span:before, .menu span:after {
+  position: absolute;
+  content: '';
+}
+
+.menu span, .menu span:before, .menu span:after {
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  display: block;
+  border-radius: 4px;
+}
+
+.menu span:before {
+  margin: -12px 0 0 0;
+}
+
+.menu span:after {
+  margin: 12px 0 0 0;
+}
+
+.collapse span {
+  transition-duration: 0s;
+  transition-delay: .2s;
+}
+
+.collapse.open span {
+  background-color: rgba(255, 255, 255, 0);
+  transition-delay: .1s;
+}
+
+.collapse span:before {
+  transition-property: margin, transform;
+  transition-duration: .2s;
+  transition-delay: .2s, 0;
+}
+
+.collapse.open span:before {
+  margin-top: 0;
+  transform: rotate(45deg);
+  transition-delay: 0, .2s;
+}
+
+.collapse span:after {
+  transition-property: margin, transform;
+  transition-duration: .2s;
+  transition-delay: .2s, 0;
+}
+
+.collapse.open span:after {
+  margin-top: 0;
+  transform: rotate(-45deg);
+  transition-delay: 0, .2s;
+}
+
+.flex {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.flex li {
+  width: 28%;
+}
+.flex li img {
+  max-width: 95%;
+  display: block;
+}
