@@ -1,9 +1,13 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 import AddLeague from '../components/AddLeague'
 import AddPacksToLeague from '../components/AddPacksToLeague'
 import AddPlayersToLeague from '../components/AddPlayersToLeague'
 // import LeagueCreationBreadcrumb from '../components/LeagueCreationBreadcrumb'
+
+import packAdapter from '../adapters/packAdapter'
+import {setPacks} from '../actions/packActions'
 
 class LeagueCreation extends React.Component {
   state = {
@@ -19,6 +23,11 @@ class LeagueCreation extends React.Component {
     },
     packs: [],
     players: []
+  }
+
+  componentDidMount() {
+    packAdapter.getAll()
+    .then(this.props.setPacks)
   }
 
   handleNext = () => {
@@ -43,6 +52,11 @@ class LeagueCreation extends React.Component {
     })
   }
 
+  handlePackSelection = (pack) => {
+    // ! NEED TO SEND BACK PackID and week_number
+    this.setState({packs: [...this.state.packs, pack]})
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     debugger
@@ -58,8 +72,10 @@ class LeagueCreation extends React.Component {
         />
       case 'addPacks':
         return <AddPacksToLeague 
+        handlePackSelection={this.handlePackSelection}
         handleNext={this.handleNext} 
         handleBack={this.handleBack} 
+        selectedPacks={this.state.packs}
         />
       case 'addPlayers':
         return <AddPlayersToLeague 
@@ -91,4 +107,4 @@ class LeagueCreation extends React.Component {
   }
 }
 
-export default LeagueCreation
+export default connect(null, {setPacks})(LeagueCreation)

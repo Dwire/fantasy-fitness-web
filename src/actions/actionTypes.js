@@ -18,6 +18,8 @@ export const DELETE_TEAM_COMPLETION = 'DELETE_TEAM_COMPLETION'
 export const ADD_TEAM_COMPLETION = 'ADD_TEAM_COMPLETION'
 export const ADD_TEAM_MESSAGE = 'ADD_TEAM_MESSAGE'
 
+// Pack Reducer
+export const SET_PACKS = 'SET_PACKS'
 
 
 // BookClub Reducer

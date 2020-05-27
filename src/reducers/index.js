@@ -4,6 +4,7 @@ import userReducer from './userReducer'
 import sessionsReducer from './sessionsReducer'
 import leagueReducer from './leagueReducer'
 import teamReducer from './teamReducer'
+import packReducer from './packReducer'
 
 // import settingsAndFormReducer from './settingsAndFormReducer'
 
@@ -14,5 +15,6 @@ export default combineReducers({
   teams: teamReducer,
   // bookClub: bookClubReducer,
   session: sessionsReducer,
+  packs: packReducer
   // settingsAndFormReducer: settingsAndFormReducer
 })
