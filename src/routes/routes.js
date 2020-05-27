@@ -8,6 +8,7 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 import Auth from '../components/Auth'
 import LandingPage from '../containers/LandingPage'
 import LeagueDash from '../containers/LeagueDash'
+import LeagueCreation from '../containers/LeagueCreation'
 
 
 // import EditProfileForm from '../components/EditProfileForm'
@@ -20,6 +21,7 @@ class Routes extends React.Component {
         {/* <Route exact path="/sessions" component={Sessions} /> */}
         {/* <Route exact path="/login" component={Login} /> */}
         {/* <Route exact path="/register" component={Register} /> */}
+        <Route exact path="/league_creation" component={LeagueCreation} />
         <Route path="/home" component={LandingPage} />
         <Route path="/dashboard" component={LeagueDash} />
         <Route path="/auth" component={Auth} />

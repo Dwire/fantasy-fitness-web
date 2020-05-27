@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link, Redirect} from 'react-router-dom'
 
 class SideNav extends React.Component {
   state = {
@@ -13,6 +14,11 @@ class SideNav extends React.Component {
     }
   }
 
+  // this should be moved
+  handleLogout = () => {
+    localStorage.clear()
+  }
+
   render(){
     return (
       <div class="wrapper">
@@ -23,11 +29,11 @@ class SideNav extends React.Component {
         <aside className={"slidenav " + this.state.htmlClass} >
           <nav>
             <ul>
-              <li> Create A League </li>
+              <li><Link to='league_creation'>Create A League</Link> </li>
               <li> League Invitations </li>
               <li> See All Work Out Packs </li>
               <li> Profile </li>
-              <li> sign out </li>
+              <li onClick={this.handleLogout}> sign out </li>
             </ul>
           </nav>
         </aside>

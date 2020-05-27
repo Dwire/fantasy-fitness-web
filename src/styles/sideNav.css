@@ -21,7 +21,7 @@ header {
 .slidenav {
   position: fixed;
   height: 100%;
-  background: cadetblue;
+  background-color: rgba(95, 158, 160, 0.8);
   width: 150px;
   transition: all 0.2s 0.1s;
   margin-left: -150px;
