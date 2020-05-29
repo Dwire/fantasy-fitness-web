@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import MessageInput from '../components/MessageInput'
 import Message from '../components/Message'
 
+import { animateScroll } from "react-scroll"
+
 class MessageBoard extends React.Component {
   state = {
     messages: "teamMessages",
@@ -38,6 +40,20 @@ class MessageBoard extends React.Component {
     }
   }
 
+  scrollToBottom() {
+    animateScroll.scrollToBottom({
+      containerId: "messageScroll"
+    });
+  }
+  
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+  
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
   render () {
     console.log("STATE", this.state)
     return (
@@ -45,8 +61,11 @@ class MessageBoard extends React.Component {
         <h1>{this.state.messages === 'teamMessages' ? "Team Message Board" : "League Message Board"}</h1>
         <button onClick={this.changeBoard}>Switch</button>
         <div className='outer-message-container'>
-          <div className="message-container">
+          <div className="message-container" id="messageScroll"> 
             {this.renderMessages()}
+            <div style={{ float:"left", clear: "both" }}
+             ref={(el) => { this.messagesEnd = el; }}>
+            </div>
           </div>
         </div>
         <MessageInput messages={this.state.messages}/>

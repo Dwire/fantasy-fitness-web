@@ -54,6 +54,7 @@ class LeagueCreation extends React.Component {
 
   handlePackSelection = (pack) => {
     // ! NEED TO SEND BACK PackID and week_number
+    // could just iterate through array and grab infor plus index
     this.setState({packs: [...this.state.packs, pack]})
   }
 
