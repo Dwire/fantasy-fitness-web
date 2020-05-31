@@ -5,9 +5,13 @@ import AddLeague from '../components/AddLeague'
 import AddPacksToLeague from '../components/AddPacksToLeague'
 import AddPlayersToLeague from '../components/AddPlayersToLeague'
 // import LeagueCreationBreadcrumb from '../components/LeagueCreationBreadcrumb'
+import SideNav from '../components/SideNav'
 
 import packAdapter from '../adapters/packAdapter'
 import {setPacks} from '../actions/packActions'
+import leagueAdapter from '../adapters/leagueAdapter'
+import leaguePackAdapter from '../adapters/leaguePackAdapter'
+
 
 class LeagueCreation extends React.Component {
   state = {
@@ -21,8 +25,9 @@ class LeagueCreation extends React.Component {
       number_of_weeks: 0,
       start_date: ''
     },
-    packs: [],
-    players: []
+    selectedPacks: [],
+    players: [],
+    currentPlayer: ''
   }
 
   componentDidMount() {
@@ -52,15 +57,43 @@ class LeagueCreation extends React.Component {
     })
   }
 
+  handleCurrentPlayerInputChange = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
+  handleCurrentPlayerAdd = (e) => {
+    e.preventDefault()
+    this.setState({
+      players: [...this.state.players, this.state.currentPlayer],
+      currentPlayer: ''
+    })
+  }
+
   handlePackSelection = (pack) => {
     // ! NEED TO SEND BACK PackID and week_number
     // could just iterate through array and grab infor plus index
-    this.setState({packs: [...this.state.packs, pack]})
+    this.setState({selectedPacks: [...this.state.selectedPacks, pack]})
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    debugger
+  createLeagueBtn = () => {
+    leagueAdapter.create(this.state.league)
+    .then(console.log)
+    // createleage
+    //? with return value set state
+    // create leagePacks 
+    //? with return value set state
+    // create teams at random
+
+    // redirect to league dash
+  }
+
+  createLeagueRequest = () => {
+    leagueAdapter.create(this.state.league)
+    .then(createLeaguePacks)
+  }
+
+  createLeaguePacks = () => {
+    leaguePackAdapter.create
   }
 
   displayForms = () => {
@@ -76,12 +109,17 @@ class LeagueCreation extends React.Component {
         handlePackSelection={this.handlePackSelection}
         handleNext={this.handleNext} 
         handleBack={this.handleBack} 
-        selectedPacks={this.state.packs}
+        selectedPacks={this.state.selectedPacks}
+        leagueInfo={this.state.league}
         />
       case 'addPlayers':
         return <AddPlayersToLeague 
+        createLeagueBtn={this.createLeagueBtn}
         handleBack={this.handleBack}
-        handleSubmit={this.handleSubmit} 
+        handleCurrentPlayerInputChange={this.handleCurrentPlayerInputChange}
+        handleCurrentPlayerAdd={this.handleCurrentPlayerAdd}
+        players={this.state.players} 
+        currentPlayer={this.state.currentPlayer} 
         />
       default:
         return <AddLeague />
@@ -94,6 +132,7 @@ class LeagueCreation extends React.Component {
     
     return (
       <div>
+          <SideNav />
         <ul class="breadcrumb">
           <li><a href="#">Create League</a></li>
           <li><a href="#">Add Workout Packs</a></li>

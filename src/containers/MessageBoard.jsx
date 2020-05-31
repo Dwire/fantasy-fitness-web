@@ -63,9 +63,6 @@ class MessageBoard extends React.Component {
         <div className='outer-message-container'>
           <div className="message-container" id="messageScroll"> 
             {this.renderMessages()}
-            <div style={{ float:"left", clear: "both" }}
-             ref={(el) => { this.messagesEnd = el; }}>
-            </div>
           </div>
         </div>
         <MessageInput messages={this.state.messages}/>

@@ -2,7 +2,7 @@ import { SET_INITIAL_STATE, UPDATE_TEAM_COMPLETION, DELETE_TEAM_COMPLETION, ADD_
 
 const teamState = {allTeams: [], currentTeam: {}}
 
-const userReducer = (state = teamState, action) => {
+const teamReducer = (state = teamState, action) => {
   switch (action.type) {
     case SET_INITIAL_STATE:
       // debugger
@@ -57,7 +57,7 @@ const userReducer = (state = teamState, action) => {
   }
 }
 
-export default userReducer
+export default teamReducer
 
 
 
