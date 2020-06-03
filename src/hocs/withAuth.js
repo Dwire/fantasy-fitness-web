@@ -16,7 +16,9 @@ const withAuth = WrappedComponent => {
         // debugger
         const token = window.localStorage.getItem('jwt')
         sessionsAdapter.reauth(token)
-        .then((res) => this.props.setInitialState(res.user))
+        .then((res) => {
+          this.props.setInitialState(res.user)
+        })
         // .then(res => console.log('hiiii', res))
         // this.props.fetchUser();
         // this.props.fetchUsers();

@@ -1,15 +1,15 @@
-const BASE_URL = 'http://localhost:3000/api/v1/leagues'
+const BASE_URL = 'http://localhost:3000/api/v1/league_packs'
 const token = window.localStorage.getItem('jwt')
 
 const leaguePackAdapter = {
-  create: (leagueData) => fetch(BASE_URL, {
+  create: (leaguePackData) => fetch(BASE_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Authorization': token
     },
-    body: JSON.stringify(leagueData)
+    body: JSON.stringify(leaguePackData)
   }).then(res => res.json())
 }
 

@@ -30,13 +30,17 @@ class MessageInput extends Component  {
 
   createTeamMessage = () => {
     const teamMessageData = {...this.state, team_id: this.props.currentTeam.id}
-      teamMessageAdapter.create(teamMessageData)
+    const token = localStorage.getItem('jwt')
+
+      teamMessageAdapter.create(teamMessageData, token)
       .then(this.props.createTeamMessage)
   }
 
   createLeagueMessage = () => {
     const leagueMessageData = {...this.state, league_id: this.props.currentLeague.id}
-    leagueMessageAdapter.create(leagueMessageData)
+    const token = localStorage.getItem('jwt')
+
+    leagueMessageAdapter.create(leagueMessageData, token)
     .then(this.props.createLeagueMessage)
   }
 
