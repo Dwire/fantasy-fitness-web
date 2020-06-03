@@ -15,8 +15,8 @@ import userTeamAdapter from '../adapters/userTeamAdapter'
 import userAdapter from '../adapters/userAdapter'
 import {setPacks} from '../actions/packActions'
 
-import {addLeague, setCurrentLeague} from '../actions/leagueActions'
-import {setCurrentTeam, setAllTeams} from '../actions/teamActions'
+// import {addLeague, setCurrentLeague} from '../actions/leagueActions'
+// import {setCurrentTeam, setAllTeams} from '../actions/teamActions'
 
 
 class LeagueCreation extends React.Component {
@@ -101,7 +101,6 @@ class LeagueCreation extends React.Component {
 
   createLeaguePacksRequest = (league) => {
     let packDataArray = this.state.selectedPacks.map((pack, i) => {
-      debugger
       return {pack_id: pack.id, week: i + 1, league_id: league.league.id}
     }) 
 
@@ -206,4 +205,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default withRouter(connect(mapStateToProps, {setAllTeams, setCurrentTeam, setCurrentLeague, addLeague, setPacks})(LeagueCreation))
+export default withRouter(connect(mapStateToProps, { setPacks })(LeagueCreation))
