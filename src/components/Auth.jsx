@@ -64,13 +64,13 @@ class Auth extends React.Component {
     console.log("LogIn", this.props.loggedIn);
     
     return (
-      <div>
+      <React.Fragment >
         {localStorage.getItem('jwt') || this.props.loggedIn ? 
           <Redirect to="/dashboard" />  
         :
           this.handleAuthRender()
         } 
-      </div>
+      </React.Fragment>
     )
   }
 } 

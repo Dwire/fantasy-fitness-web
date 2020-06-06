@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {setCurrentLeague} from '../actions/leagueActions'
 import {setCurrentTeam, setAllTeams} from '../actions/teamActions'
 
@@ -21,6 +21,7 @@ class SideNav extends React.Component {
   // this should be moved
   handleLogout = () => {
     localStorage.clear()
+    window.location.reload()
   }
 
   displayMyLeaguesDropDown = () => {

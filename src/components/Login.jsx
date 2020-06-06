@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 // import {connect} from 'react-redux'
 
 // import sessionAdapter from '../adapters/sessionAdapter'
@@ -6,52 +6,26 @@ import React, {Component} from 'react'
 // import {setLogin, setInitialState} from '../actions/sessionActions'
 
 
-class Login extends Component  {
-  // state = {
-  //   username: '',
-  //   password: ''
-  // }
-
-  // handleChange = (e) => {
-  //   this.setState({
-  //     [e.target.name]: e.target.value
-  //   })
-  // }
-
-  // handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   sessionAdapter.login(this.state)
-  //   .then(this.setLocalStorage)
-  // }
-
-  // setLocalStorage = (res) => {
-  //   window.localStorage.setItem('jwt', res.jwt)
-  //   // this.props.setLogin()
-  //   // this.props.setUser(res.user)
-    
-  //   this.props.setInitialState(res.user)
-  // }
-
-
-
-  render() {
-    console.log("PROPS", this.props);
-    
-    return (
-      <div>
-        <form onSubmit={this.props.handleSubmit}>
-          <label htmlFor="username">Username</label>
-          <input type='text' value={this.props.user.username} name='username' id='username' onChange={this.props.handleChange} />
-
-          <label htmlFor="password">Password</label>
-          <input type='text' value={this.props.user.password} name='password' id='password' onChange={this.props.handleChange}/>
-
-          <input type='submit' />
-        </form>
-        <button onClick={this.props.handleFormSelection}>Need to Create an Account?</button> 
-      </div>
-    )
-  }
+const Login = ({handleSubmit, handleChange, userInfo}) => {    
+  return (
+    <div className="user_forms-login">
+      <h2 className="forms_title">Login</h2>
+      <form className="forms_form" onSubmit={handleSubmit}>
+        <fieldset className="forms_fieldset">
+          <div className="forms_field">
+            <input type="text" placeholder="Username" className="forms_field-input" name="username" required autofocus value={userInfo.username} onChange={handleChange} />
+          </div>
+          <div className="forms_field">
+            <input type="password" placeholder="Password" className="forms_field-input" name="password" required value={userInfo.password} onChange={handleChange}/>
+          </div>
+        </fieldset>
+        <div className="forms_buttons">
+          <button type="button" className="forms_buttons-forgot">Forgot password?</button>
+          <input type="submit" value="Log In" className="forms_buttons-action" />
+        </div>
+      </form>
+    </div>
+  )
 }
 
 

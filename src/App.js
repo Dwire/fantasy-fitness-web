@@ -12,6 +12,7 @@ import './styles/landingPage.css';
 
 import './styles/sideNav.css';
 import './styles/leagueCreation.css';
+import './styles/loginSignup.css';
 
 
 import Routes from './routes/routes'
