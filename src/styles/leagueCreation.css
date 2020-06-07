@@ -1,6 +1,8 @@
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
+  width: 90%;
+  margin: auto;
   background-color: #eee;
 }
 
@@ -25,4 +27,115 @@ ul.breadcrumb li a {
 ul.breadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
+}
+
+/* create League form */
+.creation-container {
+  width: 90%;
+  height: 85vh;
+  margin: auto;
+  /* padding-top: 50px; */
+  background-color: lightgrey;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 85vh;
+  border-radius: 25px;
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  /* background: grey; */
+}
+
+.form-input {
+  margin-top: 20px;
+}
+
+/* ---------------- pack selection -------------*/  
+
+.pack-selection-container {
+  /* border: 1px solid black; */
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;  
+}
+
+.grid-main-header { 
+  grid-area: 1 / 1 / 2 / 7; 
+  /* border: 1px solid black;  */
+}
+.grid-selected-header { 
+  grid-area: 1 / 7 / 2 / 9; 
+  /* border: 1px solid black; */
+}
+.grid-main {
+  height: 100%;
+  grid-area: 2 / 1 / 13 / 7; 
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center;
+  align-content: space-around; */
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.pack-tile {
+  /* border: 1px solid green; */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 10px;
+  /* margin: auto; */
+  width: 30%;
+  min-width: 150px;
+  /* max-height: 200px; */
+  margin: auto;
+}
+
+.grid-selected {
+  grid-area: 2 / 7 / 13 / 9; 
+  /* border: 1px solid black; */
+  overflow: auto;
+}
+
+.grid-selection-complete-body {
+  grid-area: 2 / 1 / 13 / 9;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center;
+  align-content: space-around; */
+
+  /* overflow: auto; */
+  /* scroll-behavior: smooth; */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.selected {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 10px;
+  width: 85%;
+}
+
+.pack-tile-selected {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding: 10px;
+  /* margin: auto; */
+  width: 30%;
+  min-width: 150px;
+  margin: auto;
+  /* max-height: 200px; */
+}
+
+.pack-tile img {
+  width: 100%;
+  border-radius: 25px;
 }

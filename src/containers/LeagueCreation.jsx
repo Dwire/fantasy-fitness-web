@@ -33,7 +33,8 @@ class LeagueCreation extends React.Component {
     },
     selectedPacks: [],
     players: [],
-    currentPlayer: ''
+    currentPlayer: '',
+    selectionComplete: ''
   }
 
   componentDidMount() {
@@ -78,8 +79,17 @@ class LeagueCreation extends React.Component {
   handlePackSelection = (pack) => {
     // ! NEED TO SEND BACK PackID and week_number
     // could just iterate through array and grab infor plus index
-    this.setState({selectedPacks: [...this.state.selectedPacks, pack]})
+    this.setState({selectedPacks: [...this.state.selectedPacks, pack]}, this.checkIfSelectionIsComplete)
   }
+
+  checkIfSelectionIsComplete = () => {
+    if (this.state.selectedPacks.length === parseInt(this.state.league.number_of_weeks)){
+      this.setState({selectionComplete: 'grid-selection-complete'})
+    }else{
+      this.setState({selectionComplete: ''})
+    }
+  }
+
 
   createLeagueBtn = () => {
     // leagueAdapter.create(this.state.league)
@@ -160,6 +170,7 @@ class LeagueCreation extends React.Component {
         handlePackSelection={this.handlePackSelection}
         handleNext={this.handleNext} 
         handleBack={this.handleBack} 
+        selectionComplete={this.state.selectionComplete}
         selectedPacks={this.state.selectedPacks}
         leagueInfo={this.state.league}
         />
@@ -191,7 +202,9 @@ class LeagueCreation extends React.Component {
           <li>LFG!!!</li>
         </ul>
 
-        {this.displayForms()}
+        <div class="creation-container" >
+          {this.displayForms()}
+        </div>
 
       </div>
     )

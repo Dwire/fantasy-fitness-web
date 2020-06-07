@@ -16,6 +16,8 @@ header {
   background: #acdae7;
   height: 50px;
   overflow: auto;
+  /* width: 90%;
+  margin: auto; */
 }
 
 .slidenav {

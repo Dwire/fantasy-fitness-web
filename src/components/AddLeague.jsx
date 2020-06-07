@@ -1,32 +1,60 @@
 import React from 'react'
+import { Form, Button } from 'semantic-ui-react'
 
 const AddLeague = ({handleNext, league, handleLeageInputChange}) => {
   return (
-    <div>
-      <h1>Add League</h1>
-      <form>
-        <label htmlFor="laeagueName">League Name</label>
-        <input onChange={handleLeageInputChange} type="text" name="name" id="leagueName" value={league.name} />
-
-        <label htmlFor="laeagueMotto">League Motto</label>
-        <input onChange={handleLeageInputChange} type="text" name="motto" id="leagueMotto" value={league.motto} />
-
-        <label htmlFor="laeagueImage">Image Url</label>
-        <input onChange={handleLeageInputChange} type="text" name="image_url" id="leagueImage" value={league.image_url} />
-
-        <label htmlFor="numberOfTeams">How Many Teams</label>
-        <input onChange={handleLeageInputChange} type="number" name="number_of_teams" id="numberOfTeams" value={league.number_of_teams} />
-
-        <label htmlFor="numberOfPlayers">How Many Players</label>
-        <input onChange={handleLeageInputChange} type="number" name="number_of_players" id="numberOfPlayers" value={league.number_of_players} />
-
-        <label htmlFor="startDate">Select Start Date</label>
-        <input onChange={handleLeageInputChange} type="datetime-local" name="start_date" id="startDate" value={league.start_date} />
-
-        <label htmlFor="numberOfWeeks">How Many Weeks</label>
-        <input onChange={handleLeageInputChange} type="number" name="number_of_weeks" id="numberOfWeeks" value={league.number_of_weeks} />
-      </form>
-      <button onClick={handleNext}>NEXT</button>
+    <div class="form-container">
+      <Form>
+        <Form.Input 
+        className='form-input'
+        label='League Name' 
+        placeholder='League Name'
+        onChange={handleLeageInputChange}
+        name='name' />
+        < Form.Group widths='equal' className='form-input'>
+          <Form.Input 
+            label='Image url'
+            placeholder='Image url'
+            name='img_url'
+            onChange={handleLeageInputChange} />
+          <Form.Input 
+            label='League Motto' 
+            placeholder='League Motto'
+            onChange={handleLeageInputChange}
+            name='motto' />
+        </ Form.Group>
+        <Form.Group widths='equal' className='form-input'>
+          <Form.Input 
+          fluid 
+          type='number' 
+          label='# of Teams' 
+          placeholder='# of Teams' 
+          name='number_of_teams'
+          onChange={handleLeageInputChange} />
+          <Form.Input 
+          fluid 
+          type='number' 
+          label='# of Players' 
+          placeholder='# of Players' 
+          name='number_of_players'
+          onChange={handleLeageInputChange}/>
+          <Form.Input 
+          fluid 
+          type='number' 
+          label='# of Weeks' 
+          placeholder='# of Weeks'
+          name='number_of_weeks' 
+          onChange={handleLeageInputChange} />
+        </Form.Group>
+        <Form.Input 
+            className='form-input'
+            type='datetime-local'
+            label='Start Date'
+            placeholder='Start Date'
+            name='start_date'
+            onChange={handleLeageInputChange} />
+      </Form>
+      <Button onClick={handleNext} content='Next' icon='right arrow' labelPosition='right' className='form-input' />
     </div>
   )
 }
