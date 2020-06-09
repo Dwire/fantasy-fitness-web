@@ -5,7 +5,7 @@
 .league-dash-container {
   display: inline-grid;
   width: 95%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .column {
@@ -13,7 +13,7 @@
 }
 
 .col-1 {
-  grid-column: span 4;
+  grid-column: span 6;
   
   /* TEMP STYLES BELOW */
   /* background-color: rgba(95, 158, 160, 0.3); */
@@ -35,7 +35,7 @@
 }
 
 .col-3 {
-  grid-column: span 3;
+  grid-column: span 5;
 
   /* TEMP STYLES BELOW */
   /* background-color: rgba(136, 132, 216, 0.3); */
@@ -59,7 +59,7 @@
 }
 
 .col-5 {
-  grid-column: span 6;
+  grid-column: span 8;
 
   /* TEMP STYLES BELOW */
   /* background-color: rgba(136, 132, 216, 0.3); */
