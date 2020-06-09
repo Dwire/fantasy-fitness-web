@@ -6,11 +6,15 @@
 }
 
 .teammate-card {
-  background-color: lightgrey;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   width: 28%;
-  min-width: 100px;
-  border-radius: 25px;
-  border: 1px solid grey;
+  min-width: 150px;
+  min-height: 250px;
+  max-height: 45vh;
+  /* height: 100%; */
+  /* border-radius: 25px; */
+  /* border: 1px solid grey; */
 }
 
 .teammate-card img {
@@ -20,6 +24,7 @@
 .team-container {
   display: inline-grid;
   width: 100%;
+  overflow: auto; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -29,7 +34,6 @@
 
 .team-col-2 {
   grid-column: span 12;
-
 }
 
 .team-col-3 {
@@ -37,10 +41,16 @@
 }
 
 .team-left:hover {
-  background-color: blue;
+  /* background-color: blue; */
   /* height: 100%; */
+  background: rgb(159,156,156);
+  background: linear-gradient(90deg, rgba(159,156,156,1) 0%, rgba(245,245,245,1) 100%);
+  cursor: pointer;
 }
 
 .team-right:hover  {
-  background-color: red;
+  /* background-color: red; */
+  background: rgb(245,245,245);
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(159,156,156,1) 100%);
+  cursor: pointer;
 } 

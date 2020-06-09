@@ -18,6 +18,10 @@ class MessageInput extends Component  {
       [e.target.name]: e.target.value
     })
   }
+
+  clearMessage = () => {
+    this.setState({content: ''})
+  }
   
   handleSubmit = (e) => {
     e.preventDefault()
@@ -34,6 +38,7 @@ class MessageInput extends Component  {
 
       teamMessageAdapter.create(teamMessageData, token)
       .then(this.props.createTeamMessage)
+      .then(this.clearMessage)
   }
 
   createLeagueMessage = () => {
@@ -42,6 +47,7 @@ class MessageInput extends Component  {
 
     leagueMessageAdapter.create(leagueMessageData, token)
     .then(this.props.createLeagueMessage)
+    .then(this.clearMessage)
   }
 
   render() {

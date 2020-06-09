@@ -28,3 +28,35 @@
   background-color: cadetblue;
   height: 40px;
 }
+
+.user-message-container {
+  text-align: right;
+  margin-right: 20px;
+  
+}
+
+.teammate-message-container {
+  text-align: left;
+  margin-left: 20px;
+  
+}
+
+.user-message {
+  display: inline-block;
+  text-align: right;
+  margin: 10px;
+  padding: 5px 10px 5px 30px;
+  
+  border-radius: 25px;
+  background-color: lightblue;
+}
+
+.teammate-message {
+  /* display: inline-block; */
+  display: inline-block;
+  text-align: left;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: lightgrey;
+}

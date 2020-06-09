@@ -1,14 +1,30 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 
-const Message = ({message}) => {
-  console.log("MESS",message)
+const Message = ({message, userId}) => {
+  const fromLoggedInUser = () => {
+    if (message.user && message.user.id === userId){
+      return true
+    }else{
+      return false
+    }
+  }
 
   return (
-    <div className='message'>
-      <p><strong>{message.user ? message.user.username: "F**K"}:</strong> {message.content}</p>
+    <div className={fromLoggedInUser() ? 'user-message-container' : 'teammate-message-container'}>
+      <div className={fromLoggedInUser() ? 'user-message' : 'teammate-message'}>
+        <strong>{message.user ? message.user.username: "F**K"}:</strong>
+        <p> {message.content}</p>
+      </div>
     </div>
   )
 }
 
-export default Message
+const mapStateToProps = state => {
+  return {
+    userId: parseInt(state.user.id)
+  }
+}
+
+export default connect(mapStateToProps, null)(Message)
