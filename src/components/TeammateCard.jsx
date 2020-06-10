@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const TeammateCard = ({team, player}) => {
+const TeammateCard = ({team, player, index}) => {
   const playerCompletions = () => {
     return team.completions.filter(comp => comp.user_id === player.id)
   }
@@ -15,7 +15,7 @@ const TeammateCard = ({team, player}) => {
   }
 
   return (
-    <div className='teammate-card'>
+    <div className={`teammate-card teammate-${index + 1}`}>
       {/* <h5>{`${player.first_name} ${player.last_name}`}</h5> */}
       <h5>{player.username}</h5>
       <img src={player.avatar} alt="player avatar"/>

@@ -54,3 +54,50 @@
   background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(159,156,156,1) 100%);
   cursor: pointer;
 } 
+
+
+
+
+.teammate-1 {
+  box-shadow: 0px 0px 20px rgba(68, 155, 57, 0.5);
+}
+
+.teammate-1 h5 {
+  padding: 5px;
+  /* background-color: rgba(68, 155, 57, 0.5); */
+  background: rgb(68,155,57);
+  background: linear-gradient(90deg, rgba(68,155,57,0.2) 0%, rgba(68,155,57,0.5) 50%, rgba(68,155,57,0.2) 100%);
+}
+
+.teammate-2 {
+  box-shadow: 0px 0px 20px rgba(160, 156, 250, 0.5);
+}
+
+.teammate-2 h5 {
+  padding: 5px;
+  background: rgb(160, 156, 250);
+  background: linear-gradient(90deg, rgba(160, 156, 250, 0.2) 0%, rgba(160, 156, 250, 0.5) 50%, rgba(160, 156, 250, 0.2) 100%);
+}
+
+.teammate-3 {
+  box-shadow: 0px 0px 20px rgba(244, 177, 90, 0.5);
+}
+
+.teammate-3 h5 {
+  padding: 5px;
+  background: rgb(244, 177, 90);
+  background: linear-gradient(90deg, rgba(244, 177, 90, 0.2) 0%, rgba(244, 177, 90, 0.5) 50%, rgba(244, 177, 90, 0.2) 100%);
+}
+
+.teammate-1:hover {
+  box-shadow: 5px 10px 20px rgba(68, 155, 57, 0.5);
+  cursor: pointer;
+}
+.teammate-2:hover {
+  box-shadow: 5px 10px 20px rgba(160, 156, 250, 0.5);
+  cursor: pointer;
+}
+.teammate-3:hover {
+  box-shadow: 5px 10px 20px rgba(244, 177, 90, 0.5);
+  cursor: pointer;
+}

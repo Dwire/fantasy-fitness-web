@@ -21,7 +21,7 @@ const Teammates = ({user_id, selectedPack, currentTeam}) => {
 
     if (currentTeam.teammates) {
       // NOTE: SLICE BELOW IS JUST TO LIMIT PLAYERS TO 3 FOR NOW
-       return currentTeam.teammates.slice(0,3).map(player => <TeammateCard team={currentTeam} player={player}/>)
+       return currentTeam.teammates.slice(0,3).map((player, i) => <TeammateCard team={currentTeam} index={i} player={player}/>)
     }
   }
 

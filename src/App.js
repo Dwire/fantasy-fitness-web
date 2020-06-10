@@ -9,6 +9,7 @@ import './styles/league.css';
 import './styles/index.css';
 import './styles/message.css';
 import './styles/landingPage.css';
+import './styles/leagueChart.css';
 
 import './styles/sideNav.css';
 import './styles/leagueCreation.css';
