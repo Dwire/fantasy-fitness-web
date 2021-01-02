@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000/api/v1/users/'
+// const BASE_URL = 'http://localhost:3000/api/v1/users/'
+const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/users/'
 
 const userAdapter = {
   create: (user) => fetch(BASE_URL, {

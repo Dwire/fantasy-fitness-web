@@ -58,15 +58,22 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
     // .then(console.log)
   }
 
-  const checkWorkoutOwner = () => {
-    // debugger
-    if (challenge.completionUser && challenge.completionUser.id === parseInt(user.id)){
-      return true 
-    }else if (!challenge.completionUser){
-      return true 
-    }else{
-     return false 
-    }
+  // const checkWorkoutOwner = () => {
+  //   // debugger
+  //   if (challenge.completionUser && challenge.completionUser.id === parseInt(user.id)){
+  //     return true 
+  //   }else if (!challenge.completionUser){
+  //     return true 
+  //   }else{
+  //    return false 
+  //   }
+  // }
+
+  const checkIfyouShouldSeeDropDown = () => {
+    const teammateIds = currentTeam.teammates.map(member => member.id)
+  
+    return teammateIds.includes(parseInt(user.id))
+    // console.log(currentTeam.teammates.includes(member => member.id === parseInt(user.id))); 
   }
 
   return (
@@ -75,13 +82,14 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
       {/* <p>Description: {challenge.workout.description}</p> */}
       <p>{challenge.workout.category}</p>
       <p>Points: {challenge.workout.default_points}</p>
-      <img src={challenge.workout.image_url} alt="workout"/>
+      <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/>
       <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
       <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
 
-      {checkWorkoutOwner() ? 
+      {/* {checkWorkoutOwner() ?  */}
+      { checkIfyouShouldSeeDropDown() ?
         <select 
-        id={challenge.completion ? challenge.completion.id: null} 
+        id={challenge.completion ? challenge.completion.id : null} 
         onChange={handleChange}
         value={challenge.completion ? challenge.completion.status : "open"}>
           <option value="open">Open</option>
@@ -91,6 +99,10 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
       :
         null
       }
+
+      {/* : */}
+        {/* null */}
+      {/* } */}
     </div>
   )
 }
@@ -105,3 +117,6 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {updateTeamCompletion, deleteTeamCompletion, createTeamCompletion})(ChallengeCard)
+
+
+

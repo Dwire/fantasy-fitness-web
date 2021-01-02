@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000/api/v1/'
+// const BASE_URL = 'http://localhost:3000/api/v1/'
+const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/'
 // const token = window.localStorage.getItem('jwt')
 
 const sessionsAdapter = {

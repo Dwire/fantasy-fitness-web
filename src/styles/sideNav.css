@@ -15,7 +15,11 @@ h1 {
 header {
   background: #acdae7;
   height: 50px;
-  overflow: auto;
+  /* overflow: auto; */
+  position: fixed;
+  top: 0; 
+  width: 100%;
+  z-index: 100;
   /* width: 90%;
   margin: auto; */
 }
@@ -30,6 +34,7 @@ header {
 }
 .slidenav.open {
   margin-left: 0;
+  margin-top: 50px;
 }
 
 aside {

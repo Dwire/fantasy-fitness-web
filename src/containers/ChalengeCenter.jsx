@@ -34,7 +34,12 @@ const ChallengeCenter = ({selectedPack, currentTeam}) => {
 
   return (
     <div className='column col-5'>
-      <h1>Challenge Center</h1>
+      <div className='header'>
+        <p className='header-left'>◀</p>
+        <h1 className='header-center'> Challenge Center </h1>
+        <p className='header-right'>▶</p>
+      </div>
+
       <div className='challenge-container'>
         {displayChallenges()}
       </div>

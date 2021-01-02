@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3000/api/v1/leagues'
+// const BASE_URL = 'http://localhost:3000/api/v1/leagues'
+const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/leagues'
 const token = window.localStorage.getItem('jwt')
 
 const leagueAdapter = {
