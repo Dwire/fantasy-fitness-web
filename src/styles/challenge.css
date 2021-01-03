@@ -170,6 +170,7 @@
   background-image: url('../assets/images/strength.jpg');
   
   background-size: cover;
+  /* background-position: top; */
 }
 
 .yoga {
