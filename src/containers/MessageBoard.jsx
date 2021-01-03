@@ -28,16 +28,13 @@ class MessageBoard extends React.Component {
       let loggedInUsersTeam = this.props.allTeams.find(team => {
         return team.teammates.find(teammate => teammate.id === parseInt(this.props.user.id))
       })
-      console.log("WTF", loggedInUsersTeam);
       let orderedMessages = loggedInUsersTeam.messages.sort((m1, m2) => m1.id - m2.id)
-      console.log("order", orderedMessages)
-      console.log("new")
-  
       return orderedMessages.map(message => {
         return <Message message={message}/>
       })
     }else if (this.props.leagueMessages){
-      return this.props[this.state.messages].map(message => {
+      let orderedMessages = this.props[this.state.messages].sort((m1, m2) => m1.id - m2.id)
+      return orderedMessages.map(message => {
         return <Message message={message}/>
       })
     }
