@@ -29,6 +29,8 @@ class MessageBoard extends React.Component {
         return team.teammates.find(teammate => teammate.id === parseInt(this.props.user.id))
       })
       console.log("WTF", loggedInUsersTeam);
+      debugger
+      let orderedMessages = loggedInUsersTeam.messages.sort(message => message.id)
       
       return loggedInUsersTeam.messages.map(message => {
         return <Message message={message}/>

@@ -37,7 +37,6 @@ export const createTeamCompletion = (completion) => {
 }
 
 export const createTeamMessage = (messageArray) => {
-  debugger
   return {
     type: ADD_TEAM_MESSAGE,
     payload: messageArray
