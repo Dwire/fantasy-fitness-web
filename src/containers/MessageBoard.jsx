@@ -58,8 +58,10 @@ class MessageBoard extends React.Component {
     console.log("STATE", this.state)
     return (
       <div className='column col-4'>
-        <h1>{this.state.messages === 'teamMessages' ? "Team Message Board" : "League Message Board"}</h1>
-        <button onClick={this.changeBoard}>Switch</button>
+        <div className="message-board-header">
+          <h1>{this.state.messages === 'teamMessages' ? "Team Message Board" : "League Message Board"}</h1>
+          <button onClick={this.changeBoard}>Switch</button>
+        </div>
         <div className='outer-message-container'>
           <div className="message-container" id="messageScroll"> 
             {this.renderMessages()}

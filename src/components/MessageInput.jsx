@@ -52,11 +52,11 @@ class MessageInput extends Component  {
 
   render() {
     return (
-      <div>
+      <div className="message-board-input">
         <form className='message-input-form' onSubmit={this.handleSubmit}>
           <input className='message-input-box' type='text' name='content' value={this.state.content} onChange={this.handleChange} />
 
-          <input className="message-input-button" type='submit'/>
+          <input className="message-input-button" type='submit' value="Send"/>
         </form>
       </div>
     )
