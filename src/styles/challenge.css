@@ -64,7 +64,6 @@
 }
 
 .challenge-card-inner:hover {
-  transition-timing-function: ease-in;
   background: linear-gradient(to right, white, 80%, rgba(0,0,0,0));
   color: black;
   /* background:  rgba(0,0,0,0); */
