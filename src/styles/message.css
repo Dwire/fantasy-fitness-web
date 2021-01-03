@@ -20,13 +20,16 @@
 
 .message-input-box {
   width: 80%;
-  height: 35px;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .message-input-button {
   width: 15%;
-  background-color: cadetblue;
   height: 40px;
+  border-radius: 0 10px 10px 0;
+  background-color: cadetblue;
 }
 
 .user-message-container {
@@ -47,7 +50,7 @@
   margin: 10px;
   padding: 5px 10px 5px 30px;
   
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: lightblue;
 }
 
@@ -57,6 +60,6 @@
   text-align: left;
   margin: 10px;
   padding: 5px 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: lightgrey;
 }
