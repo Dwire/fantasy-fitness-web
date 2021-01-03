@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/fantasy-fitness-web/static/css/main.8b74e557.chunk.css",
-    "main.js": "/fantasy-fitness-web/static/js/main.37982fd3.chunk.js",
-    "main.js.map": "/fantasy-fitness-web/static/js/main.37982fd3.chunk.js.map",
+    "main.css": "/fantasy-fitness-web/static/css/main.a4841353.chunk.css",
+    "main.js": "/fantasy-fitness-web/static/js/main.5f6c7579.chunk.js",
+    "main.js.map": "/fantasy-fitness-web/static/js/main.5f6c7579.chunk.js.map",
     "runtime-main.js": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js",
     "runtime-main.js.map": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js.map",
     "static/js/2.0c7f2225.chunk.js": "/fantasy-fitness-web/static/js/2.0c7f2225.chunk.js",
     "static/js/2.0c7f2225.chunk.js.map": "/fantasy-fitness-web/static/js/2.0c7f2225.chunk.js.map",
     "index.html": "/fantasy-fitness-web/index.html",
-    "precache-manifest.4124b229d8f28143ee343b4bc55594cd.js": "/fantasy-fitness-web/precache-manifest.4124b229d8f28143ee343b4bc55594cd.js",
+    "precache-manifest.547bf1b60a6be6f4675331a26739c9d4.js": "/fantasy-fitness-web/precache-manifest.547bf1b60a6be6f4675331a26739c9d4.js",
     "service-worker.js": "/fantasy-fitness-web/service-worker.js",
-    "static/css/main.8b74e557.chunk.css.map": "/fantasy-fitness-web/static/css/main.8b74e557.chunk.css.map",
-    "static/js/2.0c7f2225.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.0c7f2225.chunk.js.LICENSE.txt"
+    "static/css/main.a4841353.chunk.css.map": "/fantasy-fitness-web/static/css/main.a4841353.chunk.css.map",
+    "static/js/2.0c7f2225.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.0c7f2225.chunk.js.LICENSE.txt",
+    "static/media/challenge.css": "/fantasy-fitness-web/static/media/yoga.94dd1536.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.17e7491f.js",
     "static/js/2.0c7f2225.chunk.js",
-    "static/css/main.8b74e557.chunk.css",
-    "static/js/main.37982fd3.chunk.js"
+    "static/css/main.a4841353.chunk.css",
+    "static/js/main.5f6c7579.chunk.js"
   ]
 }
