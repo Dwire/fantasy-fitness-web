@@ -32,7 +32,7 @@ class MessageBoard extends React.Component {
       debugger
       let orderedMessages = loggedInUsersTeam.messages.sort(message => message.id)
       
-      return loggedInUsersTeam.messages.map(message => {
+      return orderedMessages.map(message => {
         return <Message message={message}/>
       })
     }else if (this.props.leagueMessages){
