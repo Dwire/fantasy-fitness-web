@@ -71,21 +71,37 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
 
   const checkIfyouShouldSeeDropDown = () => {
     const teammateIds = currentTeam.teammates.map(member => member.id)
-  
+
     return teammateIds.includes(parseInt(user.id))
     // console.log(currentTeam.teammates.includes(member => member.id === parseInt(user.id))); 
   }
 
+  const createUserClassName = () => {
+    const teammateIndexes = currentTeam.teammates.map(mate => mate.id)
+    
+    if (challenge.completion){
+      const indexOfTeamate = teammateIndexes.indexOf(challenge.completion.user_id)
+      return ` challenge-user-${indexOfTeamate}`
+    }else {
+      return ""
+    }
+
+  }
+
   return (
-    <div className={"challenge-card " + challenge.workout.category.toLowerCase() }>
+    <div className={"challenge-card " + challenge.workout.category.toLowerCase() + createUserClassName() }>
       <div className="challenge-card-inner">
-        <h1>{challenge.workout.category}</h1>
-        <h3>{challenge.workout.name}</h3>
-        <p>Description: {challenge.workout.description}</p>
+        <div className="challenge-details">
+          <h1>{challenge.workout.category}</h1>
+          <h3>{challenge.workout.name}</h3>
+          <p>Description: {challenge.workout.description}</p>
+        </div>
         {/* <p>Points: {challenge.workout.default_points}</p> */}
         {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
-        <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
-        <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+        <div className="challenge-status">
+          <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
+          <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+        </div>
 
         {/* {checkWorkoutOwner() ?  */}
         { checkIfyouShouldSeeDropDown() ?

@@ -15,7 +15,7 @@ const TeammateCard = ({team, player, index}) => {
   }
 
   return (
-    <div className={`teammate-card teammate-${index + 1}`}>
+    <div className={`teammate-card teammate-${index}`}>
       {/* <h5>{`${player.first_name} ${player.last_name}`}</h5> */}
       <h5>{player.username}</h5>
       <img src={player.avatar} alt="player avatar"/>
