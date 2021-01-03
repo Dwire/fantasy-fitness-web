@@ -89,15 +89,15 @@
   background: linear-gradient(90deg, rgba(244, 177, 90, 0.2) 0%, rgba(244, 177, 90, 0.5) 50%, rgba(244, 177, 90, 0.2) 100%);
 }
 
-.teammate-1:hover {
+.teammate-0:hover {
   box-shadow: 5px 10px 20px rgba(68, 155, 57, 0.5);
   cursor: pointer;
 }
-.teammate-2:hover {
+.teammate-1:hover {
   box-shadow: 5px 10px 20px rgba(160, 156, 250, 0.5);
   cursor: pointer;
 }
-.teammate-3:hover {
+.teammate-2:hover {
   box-shadow: 5px 10px 20px rgba(244, 177, 90, 0.5);
   cursor: pointer;
 }

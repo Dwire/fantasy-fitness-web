@@ -91,35 +91,39 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
   return (
     <div className={"challenge-card " + challenge.workout.category.toLowerCase() + createUserClassName() }>
       <div className="challenge-card-inner">
-        <div className="challenge-details">
-          <h1>{challenge.workout.category}</h1>
-          <h3>{challenge.workout.name}</h3>
-          <p>Description: {challenge.workout.description}</p>
+        <div className="challenge-card-inener-left">
+          <div className="challenge-details">
+            <h1>{challenge.workout.category}</h1>
+            <h3>{challenge.workout.name}</h3>
+            <p>Description: {challenge.workout.description}</p>
+          </div>
+          {/* <p>Points: {challenge.workout.default_points}</p> */}
+          {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
+          <div className="challenge-status">
+            <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
+            <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+          </div>
         </div>
-        {/* <p>Points: {challenge.workout.default_points}</p> */}
-        {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
-        <div className="challenge-status">
-          <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
-          <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+        <div className="challenge-card-inener-right">
+          {/* {checkWorkoutOwner() ?  */}
+          { checkIfyouShouldSeeDropDown() ?
+            <select 
+            id={challenge.completion ? challenge.completion.id : null} 
+            onChange={handleChange}
+            className="challenge-selection-dropdown"
+            value={challenge.completion ? challenge.completion.status : "open"}>
+              <option className="challenge-dropdown-option" value="open">Open</option>
+              <option className="challenge-dropdown-option" value="claimed">Claimed</option>
+              <option className="challenge-dropdown-option" value="completed">Completed</option>
+            </select>
+          :
+            null
+          }
+
+          {/* : */}
+            {/* null */}
+          {/* } */}
         </div>
-
-        {/* {checkWorkoutOwner() ?  */}
-        { checkIfyouShouldSeeDropDown() ?
-          <select 
-          id={challenge.completion ? challenge.completion.id : null} 
-          onChange={handleChange}
-          value={challenge.completion ? challenge.completion.status : "open"}>
-            <option value="open">Open</option>
-            <option value="claimed">Claimed</option>
-            <option value="completed">Completed</option>
-          </select>
-        :
-          null
-        }
-
-        {/* : */}
-          {/* null */}
-        {/* } */}
       </div>
     </div>
   )

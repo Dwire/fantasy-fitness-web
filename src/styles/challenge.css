@@ -65,6 +65,12 @@
   /* position: relative; */
   background: linear-gradient(to right, white, 0.5%, rgba(0,0,0,0));
   /* background:  rgba(0,0,0,0); */
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .challenge-card-inner:hover {
@@ -73,12 +79,37 @@
   /* background:  rgba(0,0,0,0); */
 }
 
+.challenge-card-inener-left{
+  grid-area: 1 / 1 / 9 / 9;
+}
+
+.challenge-card-inener-right{
+  grid-area: 1 / 5 / 4 / 9;
+
+  display: flex; 
+  justify-content: flex-end;
+  padding: 25px 15px 0px 0px;
+}
+
+.challenge-selection-dropdown {
+  background-color: darkgray;
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  color: black;
+  height: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+
+
 .challenge-details {
   padding: 5px;
 }
 
 .challenge-status {
   padding: 5px 15px;
+  margin: 10px 0px 20px 0px;
 }
 
 
@@ -170,7 +201,6 @@
   background-image: url('../assets/images/strength.jpg');
   
   background-size: cover;
-  /* background-position: top; */
 }
 
 .yoga {
