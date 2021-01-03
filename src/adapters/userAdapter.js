@@ -1,8 +1,7 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/users/'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/users/'
+import {BASE_URL} from './baseConfig'
 
 const userAdapter = {
-  create: (user) => fetch(BASE_URL, {
+  create: (user) => fetch(`${BASE_URL}users`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -10,7 +9,7 @@ const userAdapter = {
     },
     body: JSON.stringify(user)
   }).then(res => res.json()),
-  update: (data, token, userId) => fetch(BASE_URL + `${userId}`, {
+  update: (data, token, userId) => fetch(`${BASE_URL}users/${userId}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

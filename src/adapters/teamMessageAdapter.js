@@ -1,9 +1,8 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/team_messages'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/team_messages'
+import {BASE_URL} from './baseConfig'
 
 
 const teamMessageAdapter = {
-  create: (message, token) => fetch(BASE_URL, {
+  create: (message, token) => fetch(`${BASE_URL}team_messages`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

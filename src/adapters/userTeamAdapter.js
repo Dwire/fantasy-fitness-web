@@ -1,8 +1,7 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/user_teams/'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/user_teams/'
+import {BASE_URL} from './baseConfig'
 
 const userTeamAdapter = {
-  randomize: (usererNames, token) => fetch(BASE_URL + 'randomize', {
+  randomize: (usererNames, token) => fetch(`${BASE_URL}user_teams/randomize`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

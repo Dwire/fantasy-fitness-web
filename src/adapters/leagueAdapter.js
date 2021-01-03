@@ -1,9 +1,9 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/leagues'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/leagues'
+import {BASE_URL} from './baseConfig'
+
 const token = window.localStorage.getItem('jwt')
 
 const leagueAdapter = {
-  create: (leagueData) => fetch(BASE_URL, {
+  create: (leagueData) => fetch(`${BASE_URL}leagues`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -1,8 +1,7 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/completions'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/completions'
+import {BASE_URL} from './baseConfig'
 
 const completionAdapter = {
-  create: (token, completionData) => fetch(BASE_URL, {
+  create: (token, completionData) => fetch(`${BASE_URL}completions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -12,7 +11,7 @@ const completionAdapter = {
     body: JSON.stringify(completionData)
   })
   .then(res => res.json()),
-  delete: (token, completionId) => fetch(`${BASE_URL}/${completionId}`, {
+  delete: (token, completionId) => fetch(`${BASE_URL}completions/${completionId}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -21,7 +20,7 @@ const completionAdapter = {
     } 
   })
   .then(res => res.json()),
-  update: (token, completionData, completionId) => fetch(`${BASE_URL}/${completionId}`, {
+  update: (token, completionData, completionId) => fetch(`${BASE_URL}completions/${completionId}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

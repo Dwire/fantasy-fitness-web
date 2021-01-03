@@ -77,32 +77,34 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
   }
 
   return (
-    <div className='challenge-card'>
-      <h4>{challenge.workout.name}</h4>
-      {/* <p>Description: {challenge.workout.description}</p> */}
-      <p>{challenge.workout.category}</p>
-      <p>Points: {challenge.workout.default_points}</p>
-      <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/>
-      <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
-      <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+    <div className={"challenge-card " + challenge.workout.category.toLowerCase() }>
+      <div className="challenge-card-inner">
+        <h1>{challenge.workout.category}</h1>
+        <h3>{challenge.workout.name}</h3>
+        <p>Description: {challenge.workout.description}</p>
+        {/* <p>Points: {challenge.workout.default_points}</p> */}
+        {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
+        <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
+        <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
 
-      {/* {checkWorkoutOwner() ?  */}
-      { checkIfyouShouldSeeDropDown() ?
-        <select 
-        id={challenge.completion ? challenge.completion.id : null} 
-        onChange={handleChange}
-        value={challenge.completion ? challenge.completion.status : "open"}>
-          <option value="open">Open</option>
-          <option value="claimed">Claimed</option>
-          <option value="completed">Completed</option>
-        </select>
-      :
-        null
-      }
+        {/* {checkWorkoutOwner() ?  */}
+        { checkIfyouShouldSeeDropDown() ?
+          <select 
+          id={challenge.completion ? challenge.completion.id : null} 
+          onChange={handleChange}
+          value={challenge.completion ? challenge.completion.status : "open"}>
+            <option value="open">Open</option>
+            <option value="claimed">Claimed</option>
+            <option value="completed">Completed</option>
+          </select>
+        :
+          null
+        }
 
-      {/* : */}
-        {/* null */}
-      {/* } */}
+        {/* : */}
+          {/* null */}
+        {/* } */}
+      </div>
     </div>
   )
 }

@@ -12,6 +12,7 @@
   max-width: 92%;
   margin: auto;
   padding: 20px;
+  
 }
 
 .nav-bar {
@@ -31,3 +32,4 @@ ul.nav-bar li:hover {
   background-color: cadetblue;
   transition: 0.5s;
 }
+

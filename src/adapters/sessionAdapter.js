@@ -1,9 +1,8 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/'
+import {BASE_URL} from './baseConfig'
 // const token = window.localStorage.getItem('jwt')
 
 const sessionsAdapter = {
-  login: (user) => fetch(BASE_URL + 'login', {
+  login: (user) => fetch(`${BASE_URL}login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', 

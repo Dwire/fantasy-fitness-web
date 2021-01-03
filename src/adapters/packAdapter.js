@@ -1,8 +1,7 @@
-// const BASE_URL = 'http://localhost:3000/api/v1/packs'
-const BASE_URL = 'https://winter-workout-challenge.herokuapp.com/api/v1/packs'
+import {BASE_URL} from './baseConfig'
 
 const packAdapter = {
-  getAll: () => fetch(BASE_URL).then(res => res.json())
+  getAll: () => fetch(`${BASE_URL}packs`).then(res => res.json())
 }
 
 

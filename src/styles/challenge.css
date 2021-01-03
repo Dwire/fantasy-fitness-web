@@ -36,18 +36,38 @@
 .challenge-card {
   /* background-color: white; */
   background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
   width: 30%;
   min-width: 100px;
   margin: 10px 3px;
-  padding: 15px;
-
+  /* 
   position: relative;
-  z-index: 1;
+  z-index: 1; */
   color: white;
   border-radius: 15px;
-  /* border-radius: 25px; */
-  /* border: 1px solid grey; */
+  text-align: start;
+  
+}
+
+.challenge-card:hover {
+  transition: 0.5s;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.8);
+}
+
+.challenge-card-inner {
+  background-color: white;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(to right, white, 0.5%, rgba(0,0,0,0));
+  /* background:  rgba(0,0,0,0); */
+}
+
+.challenge-card-inner:hover {
+  transition-timing-function: ease-in;
+  background: linear-gradient(to right, white, 80%, rgba(0,0,0,0));
+  color: black;
+  /* background:  rgba(0,0,0,0); */
 }
 
 /* .challenge-card img {
@@ -56,7 +76,7 @@
 
 
 
-.challenge-card-img {
+/* .challenge-card-img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -64,4 +84,55 @@
   left: 0;
   z-index: -1;
   border-radius: 15px;
+} */
+
+.core {
+  background-image: url('../assets/images/core.jpg');
+  
+  background-size: cover;
+}
+
+.running {
+  background-image: url('../assets/images/running_legs.jpg');
+  
+  background-size: cover;
+  background-position: right top;
+}
+
+.cardio {
+  background-image: url('../assets/images/running_legs.jpg');
+  
+  background-size: cover;
+  background-position: right top;
+}
+
+.meditation {
+  background-image: url('../assets/images/meditation.jpg');
+  
+  background-size: cover;
+}
+
+.strength {
+  background-image: url('../assets/images/strength.jpg');
+  
+  background-size: cover;
+}
+
+.yoga {
+  background-image: url('../assets/images/yoga.jpg');
+  
+  background-size: cover;
+}
+
+.health {
+  background-image: url('../assets/images/apple.png');
+  
+  background-size: cover;
+}
+
+.bike {
+  background-image: url('../assets/images/bike.png');
+  
+  background-size: cover;
+  background-position: right top;
 }
