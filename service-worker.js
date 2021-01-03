@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fantasy-fitness-web/precache-manifest.60248c44ec8213f322e48e00eeba807a.js"
+  "/fantasy-fitness-web/precache-manifest.fd7fe9f99e2b7e3d2e6735f3dd9895a7.js"
 );
 
 self.addEventListener('message', (event) => {
