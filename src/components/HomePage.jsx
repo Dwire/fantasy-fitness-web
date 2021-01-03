@@ -8,7 +8,7 @@ const HomePage = () => {
 
       <div className='home-body'>
         	
-        <p>1 There is a $20 per person entry fee. At the end of the challenge, the top team splits $480 and the 2nd place team gets their money back . Yo... That's like some serious Chedda. We talking triple digits.</p>
+        <p>1 There is a $50 per person entry fee. At the end of the challenge, the top team splits $480 and the 2nd place team gets their money back . Yo... That's like some serious Chedda. We talking triple digits.</p>
 
         <p> 2	Each team completes as many squares as possible in 1 week. It is theoretically possible to complete all squares in a given week (but good luck trying!) Each square counts as 1 point. The team with the most points win. (FYI- there will be some flash challenges available for grabs each week!- keep your eyes glued to those message boards.)</p>
 

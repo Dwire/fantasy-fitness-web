@@ -48,6 +48,7 @@
 .message-input-box {
   width: 80%;
   height: 100%;
+  padding-left: 10px;
   
   /* border-radius: 10px 0 0 10px; */
   background-color: rgba(0,0,0,0.2);

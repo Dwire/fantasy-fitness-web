@@ -1,15 +1,22 @@
 .home-banner-img {
-  height: 300px;
+  height: 400px;
   background-size: 100%;
   max-width: 95%;
   margin: auto;
-  background-position: center;
-  background-image: url("https://www.quickstartfitness.com.au/wp-content/uploads/2017/11/banner.jpg");
+  /* background-image: url("https://www.quickstartfitness.com.au/wp-content/uploads/2017/11/banner.jpg"); */
+  background-image: url("../assets/images/winter_workout_heading.gif");
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: none;
+}
+
+.home-header {
+  line-height: 300px;
 }
 
 .home-body {
   background-color: cadetblue;
-  max-width: 92%;
+  max-width: 95%;
   margin: auto;
   padding: 20px;
   
@@ -18,7 +25,7 @@
 .nav-bar {
   height: 60px;
   line-height: 60px;
-  max-width: 92%;
+  max-width: 95%;
   margin: auto;
   background-color: darkgrey;
 }
