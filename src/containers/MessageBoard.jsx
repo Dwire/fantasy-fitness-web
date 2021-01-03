@@ -31,6 +31,7 @@ class MessageBoard extends React.Component {
       console.log("WTF", loggedInUsersTeam);
       let orderedMessages = loggedInUsersTeam.messages.sort((m1, m2) => m1.id - m2.id)
       console.log("order", orderedMessages)
+      console.log("new")
   
       return orderedMessages.map(message => {
         return <Message message={message}/>
