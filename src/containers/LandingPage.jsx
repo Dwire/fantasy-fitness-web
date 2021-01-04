@@ -5,8 +5,8 @@ import HomePage from '../components/HomePage'
 
 const LandingPage = () => {
   return (
-    <div> 
-      <NavBar />
+    <div className="home-page"> 
+      {/* <NavBar /> */}
       <HomePage />
     </div>
   )
