@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e2421cd04929f94f04a4d07ce653fc7d",
+    "revision": "2edb2ab8590836064cf95a247b731b4e",
     "url": "/fantasy-fitness-web/index.html"
   },
   {
