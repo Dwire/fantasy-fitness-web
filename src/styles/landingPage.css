@@ -3,6 +3,13 @@
   height: 100vh;
 }
 
+.home-page p {
+  /* background-color: rgba(54, 182, 252, 0.2); */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
 .home-banner {
   height: 350px;
   max-width: 95%;
