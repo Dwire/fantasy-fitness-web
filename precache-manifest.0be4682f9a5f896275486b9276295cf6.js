@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a29d4fb60349f4fe52ddbff9f5eebc05",
+    "revision": "76fa31de1d38efa3aaf0a92e83abdc22",
     "url": "/fantasy-fitness-web/index.html"
   },
   {
-    "revision": "ad4cc78ab03149e40f40",
-    "url": "/fantasy-fitness-web/static/css/main.dfb4deea.chunk.css"
+    "revision": "f457c9ffd51f30041de3",
+    "url": "/fantasy-fitness-web/static/css/main.cfadd6f1.chunk.css"
   },
   {
-    "revision": "96ada50005d404041b0c",
-    "url": "/fantasy-fitness-web/static/js/2.9018ef54.chunk.js"
+    "revision": "256a6aa9aed51c1ece94",
+    "url": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js"
   },
   {
     "revision": "07324541f92eab13ebe8f13b9791aaee",
-    "url": "/fantasy-fitness-web/static/js/2.9018ef54.chunk.js.LICENSE.txt"
+    "url": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad4cc78ab03149e40f40",
-    "url": "/fantasy-fitness-web/static/js/main.d93dacce.chunk.js"
+    "revision": "f457c9ffd51f30041de3",
+    "url": "/fantasy-fitness-web/static/js/main.11f1d5a9.chunk.js"
   },
   {
     "revision": "39425e9865e9f29e8d04",
@@ -40,6 +40,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fantasy-fitness-web/static/media/bike.21ec8ec7.png"
   },
   {
+    "revision": "4a662bf495e76cac24bd94619eefe8e3",
+    "url": "/fantasy-fitness-web/static/media/clock.4a662bf4.png"
+  },
+  {
     "revision": "4f4657a304059190f482eae7456e6536",
     "url": "/fantasy-fitness-web/static/media/core.4f4657a3.jpg"
   },
@@ -48,12 +52,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fantasy-fitness-web/static/media/meditation.9fc27d50.jpg"
   },
   {
+    "revision": "f2623907500fea3be4a90035c06105c1",
+    "url": "/fantasy-fitness-web/static/media/money.f2623907.png"
+  },
+  {
     "revision": "fd1cee23073c05bf109540b2da7bff0f",
     "url": "/fantasy-fitness-web/static/media/running_legs.fd1cee23.jpg"
   },
   {
     "revision": "322cca3497617a63c33720858e75879b",
     "url": "/fantasy-fitness-web/static/media/strength.322cca34.jpg"
+  },
+  {
+    "revision": "f516a40545548b4c2f0335ed987b6de8",
+    "url": "/fantasy-fitness-web/static/media/teamwork.f516a405.png"
   },
   {
     "revision": "05931869999cb84eb00e69a2c3d6ab40",

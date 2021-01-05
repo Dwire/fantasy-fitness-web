@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/fantasy-fitness-web/static/css/main.dfb4deea.chunk.css",
-    "main.js": "/fantasy-fitness-web/static/js/main.d93dacce.chunk.js",
-    "main.js.map": "/fantasy-fitness-web/static/js/main.d93dacce.chunk.js.map",
+    "main.css": "/fantasy-fitness-web/static/css/main.cfadd6f1.chunk.css",
+    "main.js": "/fantasy-fitness-web/static/js/main.11f1d5a9.chunk.js",
+    "main.js.map": "/fantasy-fitness-web/static/js/main.11f1d5a9.chunk.js.map",
     "runtime-main.js": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js",
     "runtime-main.js.map": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js.map",
-    "static/js/2.9018ef54.chunk.js": "/fantasy-fitness-web/static/js/2.9018ef54.chunk.js",
-    "static/js/2.9018ef54.chunk.js.map": "/fantasy-fitness-web/static/js/2.9018ef54.chunk.js.map",
+    "static/js/2.6dd1871d.chunk.js": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js",
+    "static/js/2.6dd1871d.chunk.js.map": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js.map",
     "index.html": "/fantasy-fitness-web/index.html",
-    "precache-manifest.1f26a86ad6b5491bf25e2879ba0ae9b6.js": "/fantasy-fitness-web/precache-manifest.1f26a86ad6b5491bf25e2879ba0ae9b6.js",
+    "precache-manifest.0be4682f9a5f896275486b9276295cf6.js": "/fantasy-fitness-web/precache-manifest.0be4682f9a5f896275486b9276295cf6.js",
     "service-worker.js": "/fantasy-fitness-web/service-worker.js",
-    "static/css/main.dfb4deea.chunk.css.map": "/fantasy-fitness-web/static/css/main.dfb4deea.chunk.css.map",
-    "static/js/2.9018ef54.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.9018ef54.chunk.js.LICENSE.txt",
+    "static/css/main.cfadd6f1.chunk.css.map": "/fantasy-fitness-web/static/css/main.cfadd6f1.chunk.css.map",
+    "static/js/2.6dd1871d.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js.LICENSE.txt",
     "static/media/challenge.css": "/fantasy-fitness-web/static/media/yoga.94dd1536.jpg",
     "static/media/arrow_left.png": "/fantasy-fitness-web/static/media/arrow_left.55ccf8cb.png",
     "static/media/arrow_right.png": "/fantasy-fitness-web/static/media/arrow_right.691f719e.png",
+    "static/media/clock.png": "/fantasy-fitness-web/static/media/clock.4a662bf4.png",
+    "static/media/money.png": "/fantasy-fitness-web/static/media/money.f2623907.png",
+    "static/media/teamwork.png": "/fantasy-fitness-web/static/media/teamwork.f516a405.png",
     "static/media/winter_workout_heading.gif": "/fantasy-fitness-web/static/media/winter_workout_heading.05931869.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.17e7491f.js",
-    "static/js/2.9018ef54.chunk.js",
-    "static/css/main.dfb4deea.chunk.css",
-    "static/js/main.d93dacce.chunk.js"
+    "static/js/2.6dd1871d.chunk.js",
+    "static/css/main.cfadd6f1.chunk.css",
+    "static/js/main.11f1d5a9.chunk.js"
   ]
 }
