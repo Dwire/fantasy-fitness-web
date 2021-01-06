@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2edb2ab8590836064cf95a247b731b4e",
+    "revision": "f0cd1bd32c5ff642e79c038b187f057f",
     "url": "/fantasy-fitness-web/index.html"
   },
   {
-    "revision": "ad1a283042d70cfa4a49",
-    "url": "/fantasy-fitness-web/static/css/main.d4010cac.chunk.css"
+    "revision": "322dc216f563d464b5d3",
+    "url": "/fantasy-fitness-web/static/css/main.e0178127.chunk.css"
   },
   {
-    "revision": "256a6aa9aed51c1ece94",
-    "url": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js"
+    "revision": "3ef6c9822af83246f947",
+    "url": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js"
   },
   {
     "revision": "07324541f92eab13ebe8f13b9791aaee",
-    "url": "/fantasy-fitness-web/static/js/2.6dd1871d.chunk.js.LICENSE.txt"
+    "url": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad1a283042d70cfa4a49",
-    "url": "/fantasy-fitness-web/static/js/main.a4443865.chunk.js"
+    "revision": "322dc216f563d464b5d3",
+    "url": "/fantasy-fitness-web/static/js/main.23f51e9a.chunk.js"
   },
   {
     "revision": "39425e9865e9f29e8d04",
