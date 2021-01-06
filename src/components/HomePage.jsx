@@ -65,7 +65,7 @@ const HomePage = () => {
         </div>
         <div class="div13">
           <img className="home-icon" src={require('../assets/images/nophone.png')} alt="nophone"/>
-          <p>// -There will be a group text including all participants. This group is for updates on Flash Challenges and other 'must know' competition details. You are in no way, shape or form allowed to respond within the group texts. If you have a motherfucking question, text the Winter Workout Umpire separately. This rule is built for everyone's sanity. Your team will receive a point deduction for every text you place in this group text. NO exceptions. Yes. Liking a text counts. If we get a notification, you loose a point. The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her: 774-451-3396</p>
+          <p>There will be a group text including all participants. This group is for updates on Flash Challenges and other 'must know' competition details. You are in no way, shape or form allowed to respond within the group texts. If you have a motherfucking question, text the Winter Workout Umpire separately. This rule is built for everyone's sanity. Your team will receive a point deduction for every text you place in this group text. NO exceptions. Yes. Liking a text counts. If we get a notification, you loose a point. The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her: 774-451-3396</p>
           
         </div>
         <div class="div14 arrow-grid"> 

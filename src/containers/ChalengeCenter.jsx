@@ -3,12 +3,25 @@ import {connect} from 'react-redux'
 
 import ChallengeCard from '../components/ChallengeCard'
 
-const ChallengeCenter = ({selectedPack, currentTeam}) => {
+import { setDisplayPackId } from '../actions/packActions'
+
+const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks, setDisplayPackId}) => {
 
   const displayChallenges = () => {
-    if (selectedPack){
-      return selectedPack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
+    console.log("DPID", displayPackId);
+
+    if (!!displayPackId){
+      const pack = leaguePacks.find(pack => pack.id === displayPackId)
+      if (pack.id === selectedPack.id ){
+        return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
+      }else{
+        return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="notCurrentPack"/>)
+      }
     }
+    
+    // if (selectedPack){
+    //   return selectedPack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
+    // }
   }
 
   const mapWorkoutToCompletion = (workout) => {
@@ -31,13 +44,44 @@ const ChallengeCenter = ({selectedPack, currentTeam}) => {
       return userAndCompletion
     }
 
+  const setToPreviousPack = () => {
+    let lastIndex = leaguePacks.length - 1
+    let currentIndex = leaguePacks.findIndex(el => el.id === displayPackId)
+
+      let newDisplayPackId = null
+      if (currentIndex === 0){
+        newDisplayPackId = leaguePacks[lastIndex].id
+      }else{
+        newDisplayPackId = leaguePacks[currentIndex - 1].id
+      }
+      
+      setDisplayPackId(newDisplayPackId)
+    }
+    
+    const setToNextPack = () => {
+      let lastIndex = leaguePacks.length - 1
+      let currentIndex = leaguePacks.findIndex(el => el.id === displayPackId)
+      
+      let newDisplayPackId = null
+      if (currentIndex === lastIndex){
+        newDisplayPackId = leaguePacks[0].id
+      }else{
+        newDisplayPackId = leaguePacks[currentIndex + 1].id
+      } 
+      
+      setDisplayPackId(newDisplayPackId)
+  }
+
+
+
+
 
   return (
     <div className='column col-5'>
       <div className='header'>
-        <p className='header-left'>◀</p>
+        <p className='header-left' onClick={setToPreviousPack}>◀</p>
         <h1 className='header-center'> Challenge Center </h1>
-        <p className='header-right'>▶</p>
+        <p className='header-right' onClick={setToNextPack}>▶</p>
       </div>
 
       <div className='challenge-container'>
@@ -51,8 +95,10 @@ const mapStateToProps = (state) => {
   return {
     selectedPack: state.leagues.currentLeague.selected_pack,
     // currentTeam: state.leagues.currentTeam 
-    currentTeam: state.teams.currentTeam 
+    currentTeam: state.teams.currentTeam,
+    leaguePacks: state.leagues.currentLeague.league_packs,
+    displayPackId: state.packs.displayPackId 
   }
 }
 
-export default connect(mapStateToProps, null)(ChallengeCenter)
+export default connect(mapStateToProps, { setDisplayPackId })(ChallengeCenter)

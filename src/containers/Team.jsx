@@ -34,8 +34,8 @@ class Team extends React.Component {
   setToNextTeam = () => {
     let lastIndex = this.props.allTeams.length - 1
     let currentIndex = this.props.allTeams.findIndex(el => el.id === this.props.currentTeam.id)
+    
     let newCurrentTeam = {}
-
     if (currentIndex === lastIndex){
       newCurrentTeam = this.props.allTeams[0]
     }else{

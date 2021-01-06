@@ -1,4 +1,4 @@
-import { SET_PACKS } from './actionTypes'
+import { SET_PACKS, SET_DISPLAY_PACK_ID } from './actionTypes'
 
 export const setPacks = (packs) => {
   return {
@@ -7,3 +7,9 @@ export const setPacks = (packs) => {
   }
 }
 
+export const setDisplayPackId = (packId) => {
+  return {
+    type: SET_DISPLAY_PACK_ID,
+    payload: packId
+  }
+}

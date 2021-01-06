@@ -22,6 +22,7 @@ export const ADD_TEAM_MESSAGE = 'ADD_TEAM_MESSAGE'
 
 // Pack Reducer
 export const SET_PACKS = 'SET_PACKS'
+export const SET_DISPLAY_PACK_ID = 'SET_DISPLAY_PACK_ID'
 
 
 // BookClub Reducer

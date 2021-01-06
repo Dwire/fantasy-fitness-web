@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import completionAdapter from '../adapters/completionAdapter'
 import {updateTeamCompletion, deleteTeamCompletion, createTeamCompletion} from '../actions/teamActions'
 
-const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
+const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, challenge, user, updateTeamCompletion, currentLeague, currentTeam, selectedPack}) => {
   // debugger
   const handleChange = (e) => {
     let token = localStorage.getItem("jwt")
@@ -71,9 +71,10 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
 
   const checkIfyouShouldSeeDropDown = () => {
     const teammateIds = currentTeam.teammates.map(member => member.id)
-
-    return teammateIds.includes(parseInt(user.id))
-    // console.log(currentTeam.teammates.includes(member => member.id === parseInt(user.id))); 
+    
+    if (teammateIds.includes(parseInt(user.id)) && visible !== "notCurrentPack") {
+      return true
+    }
   }
 
   const createUserClassName = () => {
@@ -90,7 +91,7 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
 
   return (
     <div className={"challenge-card " + challenge.workout.category.toLowerCase() + createUserClassName() }>
-      <div className="challenge-card-inner">
+      <div className={`challenge-card-inner ${visible}`}>
         <div className="challenge-card-inener-left">
           <div className="challenge-details">
             <h1>{challenge.workout.category}</h1>
@@ -110,7 +111,7 @@ const ChallengeCard = ({deleteTeamCompletion, createTeamCompletion, challenge, u
             <select 
             id={challenge.completion ? challenge.completion.id : null} 
             onChange={handleChange}
-            className="challenge-selection-dropdown"
+            className={"challenge-selection-dropdown"}
             value={challenge.completion ? challenge.completion.status : "open"}>
               <option className="challenge-dropdown-option" value="open">Open</option>
               <option className="challenge-dropdown-option" value="claimed">Claimed</option>
