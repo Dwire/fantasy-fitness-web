@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fantasy-fitness-web/static/css/main.e0178127.chunk.css",
-    "main.js": "/fantasy-fitness-web/static/js/main.23f51e9a.chunk.js",
-    "main.js.map": "/fantasy-fitness-web/static/js/main.23f51e9a.chunk.js.map",
+    "main.js": "/fantasy-fitness-web/static/js/main.fc97a0fb.chunk.js",
+    "main.js.map": "/fantasy-fitness-web/static/js/main.fc97a0fb.chunk.js.map",
     "runtime-main.js": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js",
     "runtime-main.js.map": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js.map",
     "static/js/2.623a1a5b.chunk.js": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js",
     "static/js/2.623a1a5b.chunk.js.map": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js.map",
     "index.html": "/fantasy-fitness-web/index.html",
-    "precache-manifest.3cee7579cc054bd8b5d5d7d83801890b.js": "/fantasy-fitness-web/precache-manifest.3cee7579cc054bd8b5d5d7d83801890b.js",
+    "precache-manifest.fe5e7beeba225d0590a1e1681d4b57a8.js": "/fantasy-fitness-web/precache-manifest.fe5e7beeba225d0590a1e1681d4b57a8.js",
     "service-worker.js": "/fantasy-fitness-web/service-worker.js",
     "static/css/main.e0178127.chunk.css.map": "/fantasy-fitness-web/static/css/main.e0178127.chunk.css.map",
     "static/js/2.623a1a5b.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.17e7491f.js",
     "static/js/2.623a1a5b.chunk.js",
     "static/css/main.e0178127.chunk.css",
-    "static/js/main.23f51e9a.chunk.js"
+    "static/js/main.fc97a0fb.chunk.js"
   ]
 }
