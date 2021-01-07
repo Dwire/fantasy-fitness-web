@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fantasy-fitness-web/static/css/main.e0178127.chunk.css",
-    "main.js": "/fantasy-fitness-web/static/js/main.fc97a0fb.chunk.js",
-    "main.js.map": "/fantasy-fitness-web/static/js/main.fc97a0fb.chunk.js.map",
+    "main.css": "/fantasy-fitness-web/static/css/main.d8174ccb.chunk.css",
+    "main.js": "/fantasy-fitness-web/static/js/main.fd423f8a.chunk.js",
+    "main.js.map": "/fantasy-fitness-web/static/js/main.fd423f8a.chunk.js.map",
     "runtime-main.js": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js",
     "runtime-main.js.map": "/fantasy-fitness-web/static/js/runtime-main.17e7491f.js.map",
     "static/js/2.623a1a5b.chunk.js": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js",
     "static/js/2.623a1a5b.chunk.js.map": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js.map",
     "index.html": "/fantasy-fitness-web/index.html",
-    "precache-manifest.6fe34279c8c571363f0116732349b303.js": "/fantasy-fitness-web/precache-manifest.6fe34279c8c571363f0116732349b303.js",
+    "precache-manifest.7d15e97787f2889486f0a0a3cc71b7c3.js": "/fantasy-fitness-web/precache-manifest.7d15e97787f2889486f0a0a3cc71b7c3.js",
     "service-worker.js": "/fantasy-fitness-web/service-worker.js",
-    "static/css/main.e0178127.chunk.css.map": "/fantasy-fitness-web/static/css/main.e0178127.chunk.css.map",
+    "static/css/main.d8174ccb.chunk.css.map": "/fantasy-fitness-web/static/css/main.d8174ccb.chunk.css.map",
     "static/js/2.623a1a5b.chunk.js.LICENSE.txt": "/fantasy-fitness-web/static/js/2.623a1a5b.chunk.js.LICENSE.txt",
     "static/media/challenge.css": "/fantasy-fitness-web/static/media/yoga.94dd1536.jpg",
     "static/media/arrow_left.png": "/fantasy-fitness-web/static/media/arrow_left.55ccf8cb.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.17e7491f.js",
     "static/js/2.623a1a5b.chunk.js",
-    "static/css/main.e0178127.chunk.css",
-    "static/js/main.fc97a0fb.chunk.js"
+    "static/css/main.d8174ccb.chunk.css",
+    "static/js/main.fd423f8a.chunk.js"
   ]
 }
