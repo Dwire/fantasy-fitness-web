@@ -20,9 +20,12 @@ const HomePage = () => {
       </div>
 
       <div className="home-intro">
-        <h1>INTRO</h1>
+        <h1>Intro</h1>
+        <h3>Teams of 3 will be RANDOMLY drafted this Sunday so its time to get re-acquainted (or just first time aquanted) with the rules. </h3>
         <p>
-          The goal of this challenge is about accountability and encouragement towards achieving healthy habits. Some of these challenges might be difficult for you to complete. Work with your team to divide the squares amongst yourselves. A team united always beats a team divided. and push yourself to do a few squares you were not sure you could do. 
+          The goal of this challenge is about accountability and encouragement towards achieving healthy habits. 
+          Push yourself to past your comfort zone but some of these challenges might be difficult for you to complete. Work with your team to divy up the squares amongst yourselves. 
+          A team united always beats a team divided. 
           There is real money involved but the scoring is based on the honor system. One day in the distant future we will implant chips on all participants, but for now, please be honest with yourself
           and with the winter work out community who are all connected through direct relationships with Forrest, Brad, and Alex.
         </p>
@@ -35,7 +38,6 @@ const HomePage = () => {
         <div class="div1">
           <img className="home-icon" src={moneyImg} alt="money"/>
           <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits $? and the 2nd place team gets their money back . Yo... That's like some serious Chedda. We talking triple digits.</p>
-          <p>Maybe mention teams of 3 are chosen at random.</p>
         </div>
         <div class="div2 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
@@ -49,14 +51,14 @@ const HomePage = () => {
         </div>
         <div class="div5"> 
           <img className="home-icon" src={weekImg} alt="week"/>
-          <p>Each week runs from Monday-Sunday. All squares must be initialled (once you initial a square you will be rewarded a point) by 10PM EST on Sunday. The scores for the previous week will be locked in each Monday, late entries will not count. Do yourself a favor and do not lose points because of bad bookkeeping. Maybe you will get lucky and land an accountant on your team.</p>
+          <p>Each week runs from Monday-Sunday. All completed challenge must be marked "Completed" by 10PM EST on Sunday to count for the week. The scores for the previous week will be locked in each Monday, late entries will not count. Do yourself a favor and do not lose points because of bad bookkeeping.</p>
         </div>
         <div class="div6 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
         <div class="div7">
           <img className="home-icon" src={teamWorkImg} alt="teamwork"/>
-          <p>Each square may only be completed once (i.e. 2 team members cannot get credit for the same square.) The person completing the square should enter their initials above the square (see game board.)</p>
+          <p>Each square may only be completed once (i.e. 2 team members cannot get credit for the same square.) Each square/challenge has 3 status options "Open", "Claimed", and "Completed". Use the "Claimed status to reserve chellenges you intend on completing and the "Completed" status to score the point once the challenge is finished</p>
         </div>
         <div class="div8 arrow-grid">
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
@@ -90,7 +92,9 @@ const HomePage = () => {
       </div>
       <div className="disclaimer">
         <h1>SITE WARNING</h1>
-        <p>This website is BUGGY! The site will continue to be cobbled together throughout the winter workout challenge. We are aware of many bugs that currently exsist and will be working to upgrade the site both stylistacally and functionally. Please feel free to provide any feedback subjective feedback if you want and please contact Greg (401)793-1073 if you are unable to use the site.</p>
+        <p>This website is BUGGY!</p>
+        <p>This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exsist and will be working to upgrade the site both aesthetically and functionally. 
+            please contact Greg (401)793-1073 if you are unable to use the site. Remember he has a fulltime job outside of WWC tech support so be patient</p>
       </div>
     </div>
   )
@@ -142,3 +146,6 @@ export default HomePage
 // and push yourself to do a few squares you were not sure you could do. 
 // There is real money involved but the scoring is based on the honor system. One day in the distant future we will implant chips on all participants, but for now, please be honest with yourself
 // and with the winter work out community who are all connected through direct relationships with Forrest, Brad, and Alex.  
+
+
+
