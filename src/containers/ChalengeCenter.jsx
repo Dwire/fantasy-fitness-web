@@ -80,7 +80,10 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
     <div className='column col-5'>
       <div className='header'>
         <p className='header-left' onClick={setToPreviousPack}>◀</p>
-        <h1 className='header-center'> Challenge Center </h1>
+        <div className='header-center'>
+          <h1 >{leaguePacks.find(pack => pack.id === displayPackId).pack.name} </h1>
+          <h3> Team: {currentTeam.name}</h3>
+        </div>
         <p className='header-right' onClick={setToNextPack}>▶</p>
       </div>
 
