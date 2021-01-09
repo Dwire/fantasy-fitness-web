@@ -20,21 +20,28 @@ const LeagueStandings = ({teams}) => {
   }
 
   return (
-    <div className='column col-1'>
-      <ResponsiveContainer>
-        <BarChart 
-          className='bar-chart' 
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }} 
-          data={team_total_completions()}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="completed"  fill="#8884d8" />
-          <Bar dataKey="claimed"  fill="#82ca9d" />
-        </BarChart>
-      </ResponsiveContainer>
+    <div className='column col-1 league-charts'>
+      <div>
+       <p className='chart-header-right'>▶</p>
+      </div>
+      <div className="chart-header">
+        <h1>League Standings</h1>
+      </div>
+      <p className='chart-header-left'>◀</p>
+        <ResponsiveContainer className={'chart-graph'}>
+          <BarChart 
+            className='bar-chart' 
+            margin={{ top: 5, right: 30, left: 0, bottom: 5 }} 
+            data={team_total_completions()}>
+            {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="completed"  fill="#8884d8" />
+            {/* <Bar dataKey="claimed"  fill="#82ca9d" /> */}
+          </BarChart>
+        </ResponsiveContainer>
     </div>
   )
 }
