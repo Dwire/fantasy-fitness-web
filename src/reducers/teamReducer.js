@@ -27,7 +27,13 @@ const teamReducer = (state = teamState, action) => {
         }else 
         return completion
       })
-      let newCurrentTeam = {...state.currentTeam, completions: completionList}
+      let weekCompletionList = state.currentTeam.week_completions.map(completion => {
+        if (completion.id === action.payload.id){
+          return {...completion, ...action.payload}
+        }else 
+        return completion
+      })
+      let newCurrentTeam = {...state.currentTeam, completions: completionList, week_completions: weekCompletionList}
       let allTeamsPlusUpdatedCompletion = state.allTeams.map(team => team.id === newCurrentTeam.id ? newCurrentTeam : team)
       return {...state, 
         currentTeam: newCurrentTeam, 
@@ -37,7 +43,10 @@ const teamReducer = (state = teamState, action) => {
       let completions = state.currentTeam.completions.filter(completion => {
         return completion.id !== action.payload
       })
-      let currentTeamMinusCompletion = {...state.currentTeam, completions: completions}
+      let week_completions = state.currentTeam.week_completions.filter(completion => {
+        return completion.id !== action.payload
+      })
+      let currentTeamMinusCompletion = {...state.currentTeam, completions: completions, week_completions: week_completions}
       let allTeamsMinusCompletion = state.allTeams.map(team => team.id === currentTeamMinusCompletion.id ? currentTeamMinusCompletion : team)
       return {...state, 
         currentTeam: currentTeamMinusCompletion,
@@ -45,7 +54,9 @@ const teamReducer = (state = teamState, action) => {
       }
     case ADD_TEAM_COMPLETION:
       let addedCompletion = [...state.currentTeam.completions, action.payload]
-      let teamPlusCompletion = {...state.currentTeam, completions: addedCompletion}
+      let addedCompletionToWeek = [...state.currentTeam.week_completions, action.payload]
+
+      let teamPlusCompletion = {...state.currentTeam, completions: addedCompletion, week_completions: addedCompletionToWeek}
       let allTeamsPlusCompletion = state.allTeams.map(team => team.id === teamPlusCompletion.id ? teamPlusCompletion : team)
       
       return {...state, 

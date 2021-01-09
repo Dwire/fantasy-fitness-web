@@ -81,6 +81,7 @@
   
   border-radius: 10px;
   background-color: lightblue;
+  background-color: rgba(54, 182, 252, 0.3);
 }
 
 .teammate-message {

@@ -13,7 +13,6 @@ export default combineReducers({
   user: userReducer,
   leagues: leagueReducer,
   teams: teamReducer,
-  // bookClub: bookClubReducer,
   session: sessionsReducer,
   packs: packReducer
   // settingsAndFormReducer: settingsAndFormReducer

@@ -1,6 +1,7 @@
 // Session Reducer
 export const SET_LOGIN = 'SET_LOGIN'
 export const SET_INITIAL_STATE = 'SET_INITIAL_STATE'
+export const SET_CHART_VIEW = 'SET_CHART_VIEW'
 
 
 // User Reducer

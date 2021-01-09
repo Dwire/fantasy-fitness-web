@@ -1,4 +1,4 @@
-import { SET_LOGIN, SET_INITIAL_STATE } from './actionTypes'
+import { SET_LOGIN, SET_INITIAL_STATE, SET_CHART_VIEW } from './actionTypes'
 
 export const setLogin = () => {
   return {
@@ -11,5 +11,12 @@ export const setInitialState = (userLeagueTeamData) => {
   return {
     type: SET_INITIAL_STATE,
     payload: userLeagueTeamData
+  }
+}
+
+export const setChartView = (chartView) => {
+  return {
+    type: SET_CHART_VIEW,
+    payload: chartView
   }
 }
