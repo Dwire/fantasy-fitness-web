@@ -21,13 +21,13 @@ const HomePage = () => {
 
       <div className="home-intro">
         <h1>Intro</h1>
-        <h3>Teams of 3 will be RANDOMLY drafted this Sunday so its time to get re-acquainted (or just first time aquanted) with the rules. </h3>
+        <h3>Teams of 3 will be RANDOMLY drafted this Sunday so it's time to get re-acquainted (or just first time acquainted) with the rules. </h3>
         <p>
-          The goal of this challenge is about accountability and encouragement towards achieving healthy habits. 
-          Push yourself to past your comfort zone but some of these challenges might be difficult for you to complete. Work with your team to divy up the squares amongst yourselves. 
+          The goal of this challenge is accountability and encouragement towards achieving healthy habits. 
+          Push yourself past your comfort zone, some of these challenges might be difficult for you to complete. Work with your team to divvy up squares amongst yourselves. 
           A team united always beats a team divided. 
-          There is real money involved but the scoring is based on the honor system. One day in the distant future we will implant chips on all participants, but for now, please be honest with yourself
-          and with the winter work out community who are all connected through direct relationships with Forrest, Brad, and Alex.
+          There is real money involved and scoring is based on the honor system. One day in the distant future we will implant chips in all participants, but for now, please be honest with yourself
+          and with the Winter Workout community who are all connected through direct relationships with Forrest, Brad, and Alex.
         </p>
       </div>
       <div className="rules-header">
@@ -35,66 +35,66 @@ const HomePage = () => {
           {/* <img className="arrow-down-left" src={require('../assets/images/arrow_down_left.png')} alt="down left arrow"/> */}
       </div>
       <div class="home-rules">
-        <div class="div1">
+        <div class="div1 div1-mobile">
           <img className="home-icon" src={moneyImg} alt="money"/>
-          <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits $? and the 2nd place team gets their money back . Yo... That's like some serious Chedda. We talking triple digits.</p>
+          <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits $? and the 2nd place team gets their money back. Yo...that's like some serious chedda. We talking triple digits.</p>
         </div>
         <div class="div2 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div3"> 
+        <div class="div3 div3-mobile"> 
           <img className="home-icon" src={checkbox3Img} alt="checkbox"/>
-          <p>Each team completes as many squares as possible for the week they are in. It is theoretically possible to complete all squares in a given week (but good luck trying!) Each square counts as 1 point. The team with the most points at the end of six weeks wins. (FYI- there will be some flash challenges available for grabs each week!- keep your eyes glued to those message boards.)</p>
+          <p>Each team completes as many squares as possible for the current week. It is theoretically possible to complete all squares in a given week (but good luck trying!) Each square counts as 1 point. The team with the most points at the end of 6 weeks wins. FYI- there will be some flash challenges available for grabs each week! Keep your eyes glued to those message boards.</p>
         </div>
         <div class="div4 arrow-grid"> 
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div5"> 
+        <div class="div5 div5-mobile"> 
           <img className="home-icon" src={weekImg} alt="week"/>
-          <p>Each week runs from Monday-Sunday. All completed challenge must be marked "Completed" by 10PM EST on Sunday to count for the week. The scores for the previous week will be locked in each Monday, late entries will not count. Do yourself a favor and do not lose points because of bad bookkeeping.</p>
+          <p>Each week runs from Monday-Sunday. All completed challenge must be marked "completed" by 10:00 pm EST on Sunday to count for the week. The scores for the previous week will be locked in every  Monday. Late entries will not count. Do yourself a favor and do not lose points because of bad bookkeeping.</p>
         </div>
         <div class="div6 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div7">
+        <div class="div7 div7-mobile">
           <img className="home-icon" src={teamWorkImg} alt="teamwork"/>
-          <p>Each square may only be completed once (i.e. 2 team members cannot get credit for the same square.) Each square/challenge has 3 status options "Open", "Claimed", and "Completed". Use the "Claimed status to reserve chellenges you intend on completing and the "Completed" status to score the point once the challenge is finished</p>
+          <p>Each square may only be completed once (i.e. 2 team members cannot get credit for the same square). Each square/challenge has 3 status options: "Open", "Claimed", or "Completed". Use the "Claimed" status to reserve chellenges you intend on completing, and the "Completed" status to record the point once the challenge is finished.</p>
         </div>
         <div class="div8 arrow-grid">
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div9">
+        <div class="div9 div9-mobile">
           <img className="home-icon" src={checkXImg} alt="check and x box"/>
-          <p>Each person may complete more than 1 square in one day; however, each workout can only count for 1 square. For example: if you complete the "100 challenge," this does not also count for the "strength training" square. Example 2: If you run 3 miles, you can count EITHER the 'run 3 miles' square or '30 mins of cardio' square - not both.</p>
+          <p>Each person may complete more than 1 square per day, but each workout can only count for 1 square. For example: if you complete the "100 challenge," this does not also count for the "strength training" square. Example 2: If you run 3 miles, you can count EITHER the "run 3 miles" square or "30 mins of cardio" square - not both.</p>
         </div>
         <div class="div10 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div11">
+        <div class="div11 div11-mobile">
           <img className="home-icon" src={clockImg} alt="clock"/>
           <p>The activity in each square must be started and completed within 1 day unless otherwise stated.</p>
         </div>
         <div class="div12 arrow-grid">
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div13">
+        <div class="div13 div13-mobile">
           <img className="home-icon" src={nophoneImg} alt="nophone"/>
-          <p>There will be a group text including all participants. This group is for updates on Flash Challenges and other 'must know' competition details. You are in no way, shape or form allowed to respond within the group texts. If you have a motherfucking question, text the Winter Workout Umpire separately. This rule is built for everyone's sanity. Your team will receive a point deduction for every text you place in this group text. NO exceptions. Yes. Liking a text counts. If we get a notification, you loose a point. The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her: 774-451-3396</p>
+          <p>There will be a group text for all participants. This group is for updates on Flash Challenges and other "must know" competition details. You are in no way, shape, or form allowed to respond within the group text. If you have a motherfucking question, text the Winter Workout Umpire separately. This rule is built for everyone's sanity. Your team will receive a point deduction for every text sent to the group text. NO exceptions. Yes, liking a text counts. If we get a notification, you lose a point. The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her: 774-451-3396</p>
           
         </div>
         <div class="div14 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div15">
+        <div class="div15 div15-mobile">
           <img className="home-icon" src={teamCelibrateImg} alt="team celibrate"/>
-          <p>If a player on your team fails to complete at least two squares in a given week your team will lose 1 point. Sucks to suck, so don't suck. Okay? You finished hazing week. You can do this...Don't be a Brad</p> 
+          <p>If a player on your team fails to complete at least 2 squares in a given week your team will lose 1 point. Sucks to suck, so don't suck. Okay? You finished hazing week. You can do this... don't be a Brad.</p> 
         </div>
       </div>
       <div className="disclaimer">
         <h1>SITE WARNING</h1>
         <p>This website is BUGGY!</p>
-        <p>This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exsist and will be working to upgrade the site both aesthetically and functionally. 
-            please contact Greg (401)793-1073 if you are unable to use the site. Remember he has a fulltime job outside of WWC tech support so be patient</p>
+        <p>This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exist and will be working to upgrade the site both aesthetically and functionally. 
+            Please contact Greg at (401)793-1073 if you are unable to use the site. Remember he has a full time job outside of WWC tech support so be patient.</p>
       </div>
     </div>
   )
