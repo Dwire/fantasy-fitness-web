@@ -9,7 +9,7 @@ import weekImg from '../assets/images/week.png'
 import teamWorkImg from '../assets/images/teamwork.png'
 import checkXImg from '../assets/images/check_and_x.png'
 import clockImg from '../assets/images/clock.png'
-import nophoneImg from '../assets/images/nophone.png'
+import noTrainersImg from '../assets/images/notrainers.png'
 import teamCelibrateImg from '../assets/images/team_celibrate.png'
 
 const HomePage = () => {
@@ -78,9 +78,8 @@ const HomePage = () => {
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
         <div class="div13 div13-mobile">
-          <img className="home-icon" src={nophoneImg} alt="nophone"/>
-          <p>There will be a group text for all participants. This group is for updates on Flash Challenges and other "must know" competition details. You are in no way, shape, or form allowed to respond within the group text. If you have a motherfucking question, text the Winter Workout Umpire separately. This rule is built for everyone's sanity. Your team will receive a point deduction for every text sent to the group text. NO exceptions. Yes, liking a text counts. If we get a notification, you lose a point. The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her: 774-451-3396</p>
-          
+          <img className="home-icon" src={noTrainersImg} alt="trainers"/>
+          <p>We know that some of you are instructors. Out there motivating people to move their bodies. Good for you, it's good work that we all apreciate. However, teaching a class does not count. Walking around and telling people what to do makes you cool but it ain't the same as grinding. Consider it your warm up and Get Grinding.</p>
         </div>
         <div class="div14 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
@@ -90,17 +89,31 @@ const HomePage = () => {
           <p>If a player on your team fails to complete at least 2 squares in a given week your team will lose 1 point. Sucks to suck, so don't suck. Okay? You finished hazing week. You can do this... don't be a Brad.</p> 
         </div>
       </div>
-      <div className="disclaimer">
-        <h1>SITE WARNING</h1>
-        <p>This website is BUGGY!</p>
-        <p>This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exist and will be working to upgrade the site both aesthetically and functionally. 
-            Please contact Greg at (401)793-1073 if you are unable to use the site. Remember he has a full time job outside of WWC tech support so be patient.</p>
+
+      <div className="site-contacts">
+        <div className="contacts-header">
+          <h1>Contacts</h1>
+        </div>
+        <div className="contacts-umpire">
+          <h1>THE LAW</h1>
+          <p>The Winter Workout Umpire crew will be lead by Kimber-lee Jacobsen. Take your complaints, inquiries and rule questions to her</p> 
+          <p>Kim Cell: 774-451-3396</p> 
+        </div>
+        <div className="contacts-tech-support">
+          <h1>SITE WARNING</h1>
+          <p>This website is BUGGY! This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exist and will be working to upgrade the site both aesthetically and functionally. 
+            Please contact Greg atif you are unable to use the site. Remember he has a full time job outside of WWC tech support so be patient.</p>
+          <p>Greg Cell: (401)793-1073</p>
+        </div>
       </div>
+     
     </div>
   )
 }
 
 export default HomePage
+
+
 
 
 // intro - the goal of this challenge is more about accountablity and encouragment tawards achieving healthy habits. 

@@ -6,7 +6,7 @@ import HomePage from '../components/HomePage'
 const LandingPage = () => {
   return (
     <div className="home-page"> 
-      <NavBar />
+      {/* <NavBar /> */}
       <HomePage />
     </div>
   )
