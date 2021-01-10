@@ -37,7 +37,7 @@ const HomePage = () => {
       <div class="home-rules">
         <div class="div1 div1-mobile">
           <img className="home-icon" src={moneyImg} alt="money"/>
-          <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits $? and the 2nd place team gets their money back. Yo...that's like some serious chedda. We talking triple digits.</p>
+          <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits the grand prize($). This year there is NO 2nd place. Instead, each week will have mini pot that will go to the highest perfoming team of that week. Yo...that's like some serious chedda. We talking triple digits.</p>
         </div>
         <div class="div2 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
@@ -79,7 +79,7 @@ const HomePage = () => {
         </div>
         <div class="div13 div13-mobile">
           <img className="home-icon" src={noTrainersImg} alt="trainers"/>
-          <p>We know that some of you are instructors. Out there motivating people to move their bodies. Good for you, it's good work that we all apreciate. However, teaching a class does not count. Walking around and telling people what to do makes you cool but it ain't the same as grinding. Consider it your warm up and Get Grinding.</p>
+          <p>We know that some of you are instructors, out there motivating people to move their bodies. Good for you, it's good work that we all apreciate. However, teaching a class does not count. Walking around and telling people what to do makes you cool but it ain't the same as grinding. Consider it your warm up and Get Grinding.</p>
         </div>
         <div class="div14 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
@@ -102,7 +102,7 @@ const HomePage = () => {
         <div className="contacts-tech-support">
           <h1>SITE WARNING</h1>
           <p>This website is BUGGY! This site is in an early beta stage and will continue to be worked on throughout the Winter Workout Challenge. We are aware of many bugs that currently exist and will be working to upgrade the site both aesthetically and functionally. 
-            Please contact Greg atif you are unable to use the site. Remember he has a full time job outside of WWC tech support so be patient.</p>
+            Please contact Greg if you are unable to use the site. Remember he has a full time job outside of WWC tech support so be patient.</p>
           <p>Greg Cell: (401)793-1073</p>
         </div>
       </div>

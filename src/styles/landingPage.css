@@ -211,5 +211,34 @@ ul.nav-bar li:hover {
     .div13-mobile { grid-area: 7 / 1 / 8 / 13; margin: 5px;}
     .div14 { display: none;}
     .div15-mobile { grid-area: 8 / 1 / 9 / 13; margin: 5px;}
+
+
+    .site-contacts  {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      }
+
+    .contacts-header { 
+      grid-area: 1 / 1 / 2 / 6; 
+      background-color: rgba(54, 182, 252, 0.4);
+      padding: 15px;
+    }
+
+    .contacts-umpire { 
+      grid-area: 2 / 1 / 7 / 6; 
+      padding: 20px;
+      background-color: rgba(54, 182, 252, 0.1); 
+      border: 3px solid rgba(54, 182, 252, 0.4);
+    }
+    
+    .contacts-tech-support { 
+      grid-area: 7 / 1 / 12 / 6; 
+      padding: 20px;
+      background-color:rgba(249, 7, 7, 0.1);
+      border: 3px solid rgba(249, 7, 7, 0.4);
+    }
     
   }
