@@ -53,7 +53,7 @@ const LeagueStandings = ({teams, chartView, setChartView}) => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Legend />
+            {/* <Legend /> */}
             {/* <Bar dataKey="completed"  fill="#8884d8" /> */}
             {/* <Bar dataKey="completed"  fill="rgba(54, 182, 252, 0.8)" /> */}
             <Bar dataKey="completed"  fill="rgba(113, 33, 242, 0.6)" />
