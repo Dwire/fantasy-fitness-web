@@ -6,7 +6,8 @@ import React from 'react'
 const Signup = ({handleSubmit, handleChange}) => {
     return (
       <div className="user_forms-signup">
-        <h2 className="forms_title">Sign Up</h2>
+        {/* <h2 className="forms_title">Sign Up</h2> */}
+        <h2 className="forms_title">USE LOG IN! =></h2>
         <form className="forms_form" onSubmit={handleSubmit}>
           <fieldset className="forms_fieldset">
             <div className="forms_field">
@@ -20,7 +21,7 @@ const Signup = ({handleSubmit, handleChange}) => {
             </div>
           </fieldset>
           <div className="forms_buttons">
-            <input type="submit" value="Sign up" className="forms_buttons-action" />
+            {/* <input type="submit" value="Sign up" className="forms_buttons-action" /> */}
           </div>
         </form>
       </div>

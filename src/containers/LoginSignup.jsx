@@ -63,13 +63,13 @@ class LoginSignup extends Component {
           <div className="user_options-text">
             <div className="user_options-unregistered">
               <h2 className="user_unregistered-title">Don't have an account?</h2>
-              <p className="user_unregistered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+              <p className="user_unregistered-text">You all have accounts and should be Loging In. DO not 'Sign Up'</p>
               <button className="user_unregistered-signup" id="signup-button" onClick={() => this.handleBounce('bounceLeft')}>Sign up</button>
             </div>
 
             <div className="user_options-registered">
               <h2 className="user_registered-title">Have an account?</h2>
-              <p className="user_registered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+              <p className="user_registered-text">YES! You all have accounts. Click the button below and Log In.</p>
               <button className="user_registered-login" id="login-button" onClick={() => this.handleBounce('bounceRight')}>Login</button>
             </div>
           </div>

@@ -61,7 +61,7 @@ class SideNav extends React.Component {
 
   render(){
     return (
-      <div class="wrapper">
+      <div className="wrapper">
       
         <header>
           <p onClick={this.handleClick} className= {"menu collapse " + this.state.htmlClass}><span></span></p>
@@ -69,13 +69,14 @@ class SideNav extends React.Component {
         <aside className={"slidenav " + this.state.htmlClass} >
           <nav>
             <ul>
-              <li><Link to='league_creation'>Create A League</Link> </li>
-              <li> League Invitations </li>
-              <li onClick={this.hanldeMyLeaguesToggle}>My Leagues  {this.state.myLeagues ? "↑" : "↓" } 
+              {/* <li><Link to='league_creation'>Create A League</Link> </li> */}
+              {/* <li> League Invitations </li> */}
+              {/* <li onClick={this.hanldeMyLeaguesToggle}>My Leagues  {this.state.myLeagues ? "↑" : "↓" } 
                 {this.displayMyLeaguesDropDown()}
-              </li>
-              <li> See All Work Out Packs </li>
-              <li> Profile </li>
+              </li> */}
+              {/* <li> See All Work Out Packs </li> */}
+              {/* <li> In Development </li> */}
+              {/* <li> Profile </li> */}
               <li onClick={this.handleLogout}> sign out </li>
             </ul>
           </nav>

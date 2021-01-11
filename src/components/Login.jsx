@@ -13,7 +13,7 @@ const Login = ({handleSubmit, handleChange, userInfo}) => {
       <form className="forms_form" onSubmit={handleSubmit}>
         <fieldset className="forms_fieldset">
           <div className="forms_field">
-            <input type="text" placeholder="Username" className="forms_field-input" name="username" required autofocus value={userInfo.username} onChange={handleChange} />
+            <input type="text" placeholder="Username" className="forms_field-input" name="username" required autoFocus value={userInfo.username} onChange={handleChange} />
           </div>
           <div className="forms_field">
             <input type="password" placeholder="Password" className="forms_field-input" name="password" required value={userInfo.password} onChange={handleChange}/>
