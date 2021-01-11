@@ -105,14 +105,14 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
               <h3>{challenge.workout.name}</h3>
               <p>Description: {challenge.workout.description}</p>
             </div>
-            { challenge.completion ?
+            { challenge.completion && challenge.completion.status === "completed"?
               <div className="challenge-status">
                 <h1>{challenge.completion ? challenge.completion.status.toUpperCase() : "Open"}</h1>    
                 {/* <p> User: {challenge.completionUser ? challenge.completionUser.first_name : "None"}</p>    */}
               </div>
                 :
               <div className="challenge-status">
-                <p> Status: {challenge.completion ? challenge.completion.status.toUpperCase() : "Open"}</p>    
+                <p> Status: {challenge.completion ? challenge.completion.status : "Open"}</p>    
                 <p> User: {challenge.completionUser ? challenge.completionUser.first_name : "None"}</p>   
               </div>
             }
