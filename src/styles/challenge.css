@@ -203,12 +203,12 @@
   background-size: cover;
 }
 
-.running {
+/* .running {
   background-image: url('../assets/images/running_legs.jpg');
   
   background-size: cover;
   background-position: right top;
-}
+} */
 
 .cardio {
   background-image: url('../assets/images/running_legs.jpg');
@@ -243,6 +243,55 @@
 
 .bike {
   background-image: url('../assets/images/bike.png');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.recovery {
+  background-image: url('../assets/images/recovery.jpg');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.movement {
+  background-image: url('../assets/images/movement.jpg');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.endurance {
+  background-image: url('../assets/images/endurance.jpg');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.flash {
+  background-image: url('../assets/images/flash.png');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.new {
+  background-image: url('../assets/images/new.png');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.crazy {
+  background-image: url('../assets/images/crazy.jpg');
+  
+  background-size: cover;
+  /* background-position: right top; */
+}
+
+.special {
+  background-image: url('../assets/images/special.jpg');
   
   background-size: cover;
   /* background-position: right top; */
