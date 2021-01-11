@@ -12,10 +12,13 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
 
     if (!!displayPackId){
       const pack = leaguePacks.find(pack => pack.id === displayPackId)
+
       if (pack.id === selectedPack.id ){
         return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
+      }else if (leaguePacks.indexOf(pack) > leaguePacks.indexOf(selectedPack)){
+        return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="afterCurrentPack"/>)
       }else{
-        return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="notCurrentPack"/>)
+        return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="beforCurrentPack"/>)
       }
     }
     

@@ -72,7 +72,7 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
   const checkIfyouShouldSeeDropDown = () => {
     const teammateIds = currentTeam.teammates.map(member => member.id)
     
-    if (teammateIds.includes(parseInt(user.id)) && visible !== "notCurrentPack") {
+    if (teammateIds.includes(parseInt(user.id)) && visible !== "beforeCurrentPack" && visible !== "afterCurrentPack") {
       return true
     }
   }
@@ -97,41 +97,40 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
 
   return (
     <div className={"challenge-card " + challenge.workout.category.toLowerCase() + challengeOwner() }>
-      <div className={`challenge-card-inner ${visible}`}>
-        <div className="challenge-card-inener-left">
-          <div className="challenge-details">
-            <h1>{challenge.workout.category}</h1>
-            <h3>{challenge.workout.name}</h3>
-            <p>Description: {challenge.workout.description}</p>
+      {visible !== "afterCurrentPack" ?
+        <div className={`challenge-card-inner ${visible}`}>
+          <div className="challenge-card-inener-left">
+            <div className="challenge-details">
+              <h1>{challenge.workout.category}</h1>
+              <h3>{challenge.workout.name}</h3>
+              <p>Description: {challenge.workout.description}</p>
+            </div>
+            <div className="challenge-status">
+              <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
+              <p> User: {challenge.completionUser ? challenge.completionUser.first_name : "None"}</p>   
+            </div>
           </div>
-          {/* <p>Points: {challenge.workout.default_points}</p> */}
-          {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
-          <div className="challenge-status">
-            <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
-            <p> User: {challenge.completionUser ? challenge.completionUser.first_name : "None"}</p>   
-          </div>
-        </div>
-        <div className="challenge-card-inener-right">
-          {/* {checkWorkoutOwner() ?  */}
+          <div className="challenge-card-inener-right">
           { checkIfyouShouldSeeDropDown() ?
             <select 
             id={challenge.completion ? challenge.completion.id : null} 
             onChange={handleChange}
             className={"challenge-selection-dropdown"}
             value={challenge.completion ? challenge.completion.status : "open"}>
-              <option className="challenge-dropdown-option" value="open">Open</option>
-              <option className="challenge-dropdown-option" value="claimed">Claimed</option>
-              <option className="challenge-dropdown-option" value="completed">Completed</option>
+            <option className="challenge-dropdown-option" value="open">Open</option>
+            <option className="challenge-dropdown-option" value="claimed">Claimed</option>
+            <option className="challenge-dropdown-option" value="completed">Completed</option>
             </select>
-          :
+            :
             null
           }
-
-          {/* : */}
-            {/* null */}
-          {/* } */}
+          </div>
         </div>
-      </div>
+        :
+        <div className={`${visible}`  }>
+              <h1>Future Week!</h1>
+        </div>
+      }
     </div>
   )
 }
