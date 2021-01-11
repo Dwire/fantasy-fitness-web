@@ -77,7 +77,7 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
     }
   }
 
-  const createUserClassName = () => {
+  const challengeOwner = () => {
     const teammateIndexes = currentTeam.teammates.map(mate => mate.id)
     
     if (challenge.completion){
@@ -86,11 +86,17 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
     }else {
       return ""
     }
-
   }
 
+  // const transformCategoryToClassName = () => {
+  //   let categoryString = challenge.workout.category.toLowerCase()
+  //   let categoryArray = categoryString.split
+
+  //   return categoryString.join("_")
+  // }
+
   return (
-    <div className={"challenge-card " + challenge.workout.category.toLowerCase() + createUserClassName() }>
+    <div className={"challenge-card " + challenge.workout.category.toLowerCase() + challengeOwner() }>
       <div className={`challenge-card-inner ${visible}`}>
         <div className="challenge-card-inener-left">
           <div className="challenge-details">
@@ -102,7 +108,7 @@ const ChallengeCard = ({visible, deleteTeamCompletion, createTeamCompletion, cha
           {/* <img src={challenge.workout.image_url} alt="workout" className="challenge-card-img"/> */}
           <div className="challenge-status">
             <p> Status: {challenge.completion ? challenge.completion.status : "open"}</p>    
-            <p> User: {challenge.completionUser ? challenge.completionUser.username : "None"}</p>   
+            <p> User: {challenge.completionUser ? challenge.completionUser.first_name : "None"}</p>   
           </div>
         </div>
         <div className="challenge-card-inener-right">

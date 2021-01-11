@@ -14,7 +14,7 @@ const Message = ({message, userId}) => {
   return (
     <div className={fromLoggedInUser() ? 'user-message-container' : 'teammate-message-container'}>
       <div className={fromLoggedInUser() ? 'user-message' : 'teammate-message'}>
-        <strong>{message.user ? message.user.username: "F**K"}:</strong>
+        <strong>{message.user ? message.user.first_name: "F**K"}:</strong>
         <p> {message.content}</p>
       </div>
     </div>

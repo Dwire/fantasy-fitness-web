@@ -17,7 +17,7 @@ const TeammateCard = ({team, player, index}) => {
   return (
     <div className={`teammate-card teammate-${index}`}>
       {/* <h5>{`${player.first_name} ${player.last_name}`}</h5> */}
-      <h5>{player.username}</h5>
+      <h5>{player.first_name}</h5>
       <img src={player.avatar} alt="player avatar"/>
       <p>Claimed: {numberOfCompletionsClaimed().length}</p>
       <p>Completed: {numberOfCompletionsCompleted().length}</p>
