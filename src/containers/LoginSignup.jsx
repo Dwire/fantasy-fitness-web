@@ -52,6 +52,9 @@ class LoginSignup extends Component {
     if (!!response.user) {
       this.setLocalStorage(response) 
     }else{
+      // clearing local storage is probably not necissary in the long run but will fix an issue current users 
+      // who already put in bad info are having.
+      window.localStorage.clear()
       this.setState({error: "Username or Password was incorrect. Please try again"})
     }
   }
