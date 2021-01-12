@@ -42,12 +42,55 @@
   cursor: pointer;
 }
 
+
+.challenge-dropdown-conatiner {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 20px;
+  justify-content: space-evenly;
+  /* background-color: teal; */
+  
+}
+
+.challenge-dropdown-div {
+  width: 30%;
+  min-width: 200px;
+  margin: 20px 3px;
+  /* background-color: grey; */
+  /* background: linear-gradient(to right, rgba(0,0,0,0.8), 80%, rgba(255,255,255,0.5)); */
+  /* background: linear-gradient(to right, white, 0.5%, rgba(0,0,0,0)); */
+  border-radius: 15px;
+}
+
+.challenge-dropdown-div label {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.challenge-dropdown {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), 80%, rgba(0,0,0,0.1));
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 1.5em;
+  
+}
+
+
 .challenge-container {
-  margin-top: 10px;
+  margin-top: 0x;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 20px
+  padding: 10px 20px 20px 20px;
 }
 
 .challenge-card {
@@ -217,7 +260,6 @@
   border: none;
   box-shadow: -15px 15px 20px rgba(244, 177, 90, 0.8);
 }
-
 
 
 

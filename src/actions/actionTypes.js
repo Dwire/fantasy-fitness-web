@@ -25,6 +25,9 @@ export const ADD_TEAM_MESSAGE = 'ADD_TEAM_MESSAGE'
 export const SET_PACKS = 'SET_PACKS'
 export const SET_DISPLAY_PACK_ID = 'SET_DISPLAY_PACK_ID'
 
+// From Reducer
+export const SET_DROPDOWN_OPTION = 'SET_DROPDOWN_OPTION'
+
 
 // BookClub Reducer
 // export const SET_BOOK_CLUB = 'SET_BOOK_CLUB'
