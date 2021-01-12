@@ -11,6 +11,7 @@ import LoginSignup from '../containers/LoginSignup'
 import LandingPage from '../containers/LandingPage'
 import LeagueDash from '../containers/LeagueDash'
 import LeagueCreation from '../containers/LeagueCreation'
+import DevList from '../containers/DevList'
 
 
 // import EditProfileForm from '../components/EditProfileForm'
@@ -26,6 +27,7 @@ class Routes extends React.Component {
         <Route exact path="/league_creation" component={LeagueCreation} />
         <Route path="/dashboard" component={LeagueDash} />
         <Route path="/auth" component={LoginSignup} />
+        <Route path="/dev_list" component={DevList} />
         <Route path="/" component={LandingPage} />
         {/* <Route path="/auth" component={LoginSignup} /> */}
       </Switch>

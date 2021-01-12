@@ -2,11 +2,12 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {setChartView} from '../actions/sessionActions'
 import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts'
+import {setCurrentTeam} from '../actions/teamActions'
 
 
 
 
-const LeagueStandings = ({teams, chartView, setChartView}) => {
+const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam}) => {
   
   const team_total_completions = () => {
     return teams.map(team => completion_info(team))
@@ -35,6 +36,12 @@ const LeagueStandings = ({teams, chartView, setChartView}) => {
     chartView === "allTime" ? setChartView("week") : setChartView("allTime")
   }
 
+  const assignAsCurrentTeam = (teamChartData) => {
+    const teamObj = teams.find(team => team.name === teamChartData.name)
+
+    setCurrentTeam(teamObj)
+  }
+
   return (
     <div className='column col-1 league-charts'>
       <div>
@@ -56,7 +63,7 @@ const LeagueStandings = ({teams, chartView, setChartView}) => {
             {/* <Legend /> */}
             {/* <Bar dataKey="completed"  fill="#8884d8" /> */}
             {/* <Bar dataKey="completed"  fill="rgba(54, 182, 252, 0.8)" /> */}
-            <Bar dataKey="completed"  fill="rgba(113, 33, 242, 0.6)" />
+            <Bar dataKey="completed"  fill="rgba(113, 33, 242, 0.6)" onClick={assignAsCurrentTeam}/>
             {/* <Bar dataKey="claimed"  fill="#82ca9d" /> */}
           </BarChart>
         </ResponsiveContainer>
@@ -73,4 +80,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {setChartView})(LeagueStandings)
+export default connect(mapStateToProps, {setChartView, setCurrentTeam})(LeagueStandings)

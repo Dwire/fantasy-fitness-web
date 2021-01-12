@@ -48,7 +48,6 @@ class LoginSignup extends Component {
   }
   
   handle_login_response = (response) => {
-    debugger
     if (!!response.user) {
       this.setLocalStorage(response) 
     }else{

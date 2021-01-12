@@ -34,57 +34,57 @@ const HomePage = () => {
         <h1>RULES</h1>
           {/* <img className="arrow-down-left" src={require('../assets/images/arrow_down_left.png')} alt="down left arrow"/> */}
       </div>
-      <div class="home-rules">
-        <div class="div1 div1-mobile">
+      <div className="home-rules">
+        <div className="div1 div1-mobile">
           <img className="home-icon" src={moneyImg} alt="money"/>
           <p>There is a $50 per person entry fee. At the end of the challenge, the top team splits the grand prize($). This year there is NO 2nd place. Instead, each week will have mini pot that will go to the highest perfoming team of that week. Yo...that's like some serious chedda. We talking triple digits.</p>
         </div>
-        <div class="div2 arrow-grid">
+        <div className="div2 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div3 div3-mobile"> 
+        <div className="div3 div3-mobile"> 
           <img className="home-icon" src={checkbox3Img} alt="checkbox"/>
           <p>Each team completes as many squares as possible for the current week. It is theoretically possible to complete all squares in a given week (but good luck trying!) Each square counts as 1 point. The team with the most points at the end of 6 weeks wins. FYI- there will be some flash challenges available for grabs each week! Keep your eyes glued to those message boards.</p>
         </div>
-        <div class="div4 arrow-grid"> 
+        <div className="div4 arrow-grid"> 
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div5 div5-mobile"> 
+        <div className="div5 div5-mobile"> 
           <img className="home-icon" src={weekImg} alt="week"/>
           <p>Each week runs from Monday-Sunday. All completed challenge must be marked "completed" by 10:00 pm EST on Sunday to count for the week. The scores for the previous week will be locked in every  Monday. Late entries will not count. Do yourself a favor and do not lose points because of bad bookkeeping.</p>
         </div>
-        <div class="div6 arrow-grid">
+        <div className="div6 arrow-grid">
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div7 div7-mobile">
+        <div className="div7 div7-mobile">
           <img className="home-icon" src={teamWorkImg} alt="teamwork"/>
           <p>Each square may only be completed once (i.e. 2 team members cannot get credit for the same square). Each square/challenge has 3 status options: "Open", "Claimed", or "Completed". Use the "Claimed" status to reserve chellenges you intend on completing, and the "Completed" status to record the point once the challenge is finished.</p>
         </div>
-        <div class="div8 arrow-grid">
+        <div className="div8 arrow-grid">
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div9 div9-mobile">
+        <div className="div9 div9-mobile">
           <img className="home-icon" src={checkXImg} alt="check and x box"/>
           <p>Each person may complete more than 1 square per day, but each workout can only count for 1 square. For example: if you complete the "100 challenge," this does not also count for the "strength training" square. Example 2: If you run 3 miles, you can count EITHER the "run 3 miles" square or "30 mins of cardio" square - not both.</p>
         </div>
-        <div class="div10 arrow-grid"> 
+        <div className="div10 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div11 div11-mobile">
+        <div className="div11 div11-mobile">
           <img className="home-icon" src={clockImg} alt="clock"/>
           <p>The activity in each square must be started and completed within 1 day unless otherwise stated.</p>
         </div>
-        <div class="div12 arrow-grid">
+        <div className="div12 arrow-grid">
           <img className="arrow-left arrow" src={leftArrowImg} alt="left arrow"/>
         </div>
-        <div class="div13 div13-mobile">
+        <div className="div13 div13-mobile">
           <img className="home-icon" src={noTrainersImg} alt="trainers"/>
           <p>We know that some of you are instructors, out there motivating people to move their bodies. Good for you, it's good work that we all apreciate. However, teaching a class does not count. Walking around and telling people what to do makes you cool but it ain't the same as grinding. Consider it your warm up and Get Grinding.</p>
         </div>
-        <div class="div14 arrow-grid"> 
+        <div className="div14 arrow-grid"> 
           <img className="arrow-right arrow" src={rightArrowImg} alt="right arrow"/>
         </div>
-        <div class="div15 div15-mobile">
+        <div className="div15 div15-mobile">
           <img className="home-icon" src={teamCelibrateImg} alt="team celibrate"/>
           <p>If a player on your team fails to complete at least 2 squares in a given week your team will lose 1 point. Sucks to suck, so don't suck. Okay? You finished hazing week. You can do this... don't be a Brad.</p> 
         </div>

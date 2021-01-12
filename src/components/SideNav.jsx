@@ -78,6 +78,10 @@ class SideNav extends React.Component {
               {/* <li> In Development </li> */}
               {/* <li> Profile </li> */}
               {/* <li> Profile </li> */}
+
+
+              {/* <li><Link to="/dashboard">League Dashboard</Link></li>
+              <li><Link to="/dev_list">In Development</Link></li> */}
               <li><Link to="/">Rules/Home</Link></li>
               <li onClick={this.handleLogout}>sign out</li>
             </ul>
