@@ -362,6 +362,9 @@ input::placeholder {
           animation: bounceRight 1s forwards;
 }
 
+.form_error {
+  color: #e14641;
+}
 /**
  * Responsive 990px
  */
@@ -387,3 +390,4 @@ input::placeholder {
     padding: 50px 45px;
   }
 }
+

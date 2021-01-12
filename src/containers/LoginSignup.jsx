@@ -20,7 +20,8 @@ class LoginSignup extends Component {
       password: '',
       bio: '',
       tagline: ''
-    }
+    },
+    error: ""
   }
 
   handleBounce = (bounceDirection) => {
@@ -39,10 +40,19 @@ class LoginSignup extends Component {
     e.preventDefault()
     if (this.state.bounce === 'bounceRight'){
       sessionAdapter.login(this.state.user)
-      .then(this.setLocalStorage)
+      .then(this.handle_login_response)
     }else{
       userAdapter.create(this.state.user)
-      .then(this.setLocalStorage)
+      .then(this.handle_login_response)
+    }
+  }
+  
+  handle_login_response = (response) => {
+    debugger
+    if (!!response.user) {
+      this.setLocalStorage(response) 
+    }else{
+      this.setState({error: "Username or Password was incorrect. Please try again"})
     }
   }
 
@@ -83,11 +93,13 @@ class LoginSignup extends Component {
               <Signup 
                 handleSubmit={this.handleSubmit} 
                 handleChange={this.handleChange} 
-                userInfo={this.state.user} />
+                userInfo={this.state.user} 
+                error={this.state.error}/>
               <Login 
                 handleSubmit={this.handleSubmit} 
                 handleChange={this.handleChange}
-                userInfo={this.state.user} />
+                userInfo={this.state.user}
+                error={this.state.error}/>
             </React.Fragment>
           } 
           </div>

@@ -3,11 +3,12 @@ import React from 'react'
 // import userAdapter from '../adapters/userAdapter'
 
 
-const Signup = ({handleSubmit, handleChange}) => {
+const Signup = ({handleSubmit, handleChange, error}) => {
     return (
       <div className="user_forms-signup">
         {/* <h2 className="forms_title">Sign Up</h2> */}
         <h2 className="forms_title">USE LOG IN! =></h2>
+        <h4 className="form_error">{error}</h4>
         <form className="forms_form" onSubmit={handleSubmit}>
           <fieldset className="forms_fieldset">
             <div className="forms_field">

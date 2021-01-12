@@ -6,10 +6,11 @@ import React from 'react'
 // import {setLogin, setInitialState} from '../actions/sessionActions'
 
 
-const Login = ({handleSubmit, handleChange, userInfo}) => {    
+const Login = ({handleSubmit, handleChange, userInfo, error}) => {    
   return (
     <div className="user_forms-login">
       <h2 className="forms_title">Login</h2>
+      <h4 className="form_error">{error}</h4>
       <form className="forms_form" onSubmit={handleSubmit}>
         <fieldset className="forms_fieldset">
           <div className="forms_field">
