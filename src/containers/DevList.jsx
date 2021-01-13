@@ -23,6 +23,8 @@ const LandingPage = () => {
             <li>add a list view for challenges</li>
             <li>Create player profile pages - Edit personal info/see historical data</li>
             <li>Upload profil images</li>
+            <li>Quick Edit on Team and Player "MODLE"</li>
+
             <li>Change message board to be live messaging</li>
 
             <li>export workouts to excel spredsheet printable</li>
