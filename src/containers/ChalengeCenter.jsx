@@ -4,13 +4,11 @@ import {connect} from 'react-redux'
 import ChallengeCard from '../components/ChallengeCard'
 
 import { setDisplayPackId } from '../actions/packActions'
-import { setDropdownOption } from '../actions/formActions'
+import { setDropdownOption, clearFilters } from '../actions/formActions'
 
-const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks, setDisplayPackId, setDropdownOption, dropDownStatus}) => {
+const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks, setDisplayPackId, setDropdownOption, dropDownStatus, clearFilters}) => {
 
   const displayChallenges = () => {
-    console.log("DPID", displayPackId);
-
     if (!!displayPackId){
       const pack = leaguePacks.find(pack => pack.id === displayPackId)
 
@@ -30,8 +28,11 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
   const packFilter = (pack) => {
     let packFiltered = [...pack.workouts] 
 
+    console.log("WTF", dropDownStatus);
     
     if (dropDownStatus.userId !== "all"){
+      console.log("HOW");
+      
       packFiltered = packFiltered.filter(workout => mapWorkoutToCompletion(workout).completionUser && mapWorkoutToCompletion(workout).completionUser.id === parseInt(dropDownStatus.userId))
     }
 
@@ -78,7 +79,7 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
       }else{
         newDisplayPackId = leaguePacks[currentIndex - 1].id
       }
-      
+      clearFilters()
       setDisplayPackId(newDisplayPackId)
     }
     
@@ -93,6 +94,7 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
         newDisplayPackId = leaguePacks[currentIndex + 1].id
       } 
       
+      clearFilters()
       setDisplayPackId(newDisplayPackId)
   }
 
@@ -128,7 +130,7 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
       <div className="challenge-dropdown-conatiner"> 
             <div className="challenge-dropdown-div">
               <label htmlFor="user-dropdown">Sort by User</label>
-              <select name="userId" className="challenge-dropdown" id="user-dropdown" onChange={handleDropdownChange}>
+              <select name="userId" className="challenge-dropdown" id="user-dropdown" value={dropDownStatus.userId} onChange={handleDropdownChange}>
                 <option value="all">All</option>
                 {currentTeam.teammates.map( memeber => <option value={memeber.id}>{memeber.first_name}</option>)}
               </select>
@@ -136,7 +138,7 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
 
             <div className="challenge-dropdown-div">
               <label htmlFor="category-dropdown">Sort by Category</label>
-              <select name="category" className="challenge-dropdown" id="category-dropdown" onChange={handleDropdownChange}>
+              <select name="category" className="challenge-dropdown" id="category-dropdown" value={dropDownStatus.category} onChange={handleDropdownChange}>
                 <option value="all">All</option>
                 {uniqueStatuses().map(status => <option value={status}>{status}</option>)}
               </select>
@@ -144,7 +146,7 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
 
             <div className="challenge-dropdown-div">
               <label htmlFor="status-dropdown">Sort by Status</label>
-              <select name="status" className="challenge-dropdown" id="status-dropdown" onChange={handleDropdownChange}>
+              <select name="status" className="challenge-dropdown" id="status-dropdown" value={dropDownStatus.status} onChange={handleDropdownChange}>
                 <option value="all">All</option>
                 <option value="open">Open</option>
                 <option value="claimed">Claimed</option>
@@ -170,4 +172,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { setDisplayPackId, setDropdownOption })(ChallengeCenter)
+export default connect(mapStateToProps, { setDisplayPackId, setDropdownOption, clearFilters })(ChallengeCenter)

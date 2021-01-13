@@ -3,11 +3,12 @@ import {connect} from 'react-redux'
 import {setChartView} from '../actions/sessionActions'
 import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts'
 import {setCurrentTeam} from '../actions/teamActions'
+import {clearFilters} from '../actions/formActions'
 
 
 
 
-const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam}) => {
+const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearFilters}) => {
   
   const team_total_completions = () => {
     return teams.map(team => completion_info(team))
@@ -38,7 +39,7 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam}) => {
 
   const assignAsCurrentTeam = (teamChartData) => {
     const teamObj = teams.find(team => team.name === teamChartData.name)
-
+    clearFilters()
     setCurrentTeam(teamObj)
   }
 
@@ -80,4 +81,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {setChartView, setCurrentTeam})(LeagueStandings)
+export default connect(mapStateToProps, {setChartView, setCurrentTeam, clearFilters})(LeagueStandings)

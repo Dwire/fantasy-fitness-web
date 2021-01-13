@@ -27,6 +27,7 @@ export const SET_DISPLAY_PACK_ID = 'SET_DISPLAY_PACK_ID'
 
 // From Reducer
 export const SET_DROPDOWN_OPTION = 'SET_DROPDOWN_OPTION'
+export const CLEAR_FILTERS = 'CLEAR_FILTERS'
 
 
 // BookClub Reducer

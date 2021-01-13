@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Teammates from '../components/Teammates'
 
 import {setCurrentTeam} from '../actions/teamActions'
+import {clearFilters} from '../actions/formActions'
 
 class Team extends React.Component {
   state = {
@@ -11,8 +12,10 @@ class Team extends React.Component {
 
   handleClick = (e) => {
     if (e.target.classList.contains("team-left")){
+      this.props.clearFilters()
       this.setToPreviousTeam()
     }else{
+      this.props.clearFilters()
       this.setToNextTeam()
     }
   }
@@ -63,4 +66,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {setCurrentTeam})(Team)
+export default connect(mapStateToProps, {setCurrentTeam, clearFilters})(Team)
