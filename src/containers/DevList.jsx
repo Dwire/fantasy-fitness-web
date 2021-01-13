@@ -13,11 +13,11 @@ const LandingPage = () => {
             <li>Made completed status display more prominent</li>
             <li>Fixed a login bug that occured if you loged in with the wrong credientials</li>
             <li>Clicking on the Graph changes the visible team </li>
+            <li>Filters for challenges - filter by: category, status, owner </li>
         </ul>
 
         <h1>Upcomming Changes</h1>
         <ul>
-            <li>Filters for challenges - filter by: category, status, owner </li>
             <li>Change Switch button for navigating between message boards </li>
             <li>Challenges update automatically everytime someone on your team makes a status change </li>
             <li>add a list view for challenges</li>
