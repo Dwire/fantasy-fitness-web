@@ -1,8 +1,95 @@
 .App {
   text-align: center;
+  background-color: var(--main-bg-color-dash);
 }
 
-.App-logo {
+:root {
+  --main-bg-color-dash: rgba(228, 231, 235, 0.2); 
+  --grid-bg-color-dash: rgb(255,255,255);
+  /* --grid-header-bg-color-dash: rgb(246, 247, 249); */
+  --grid-header-bg-color-dash: rgb(242, 242, 242);
+  --teammate-card-bg-color: rgb(255, 255, 255);
+  --main-font-color: rgb(0, 0, 0);
+  --team-grid-right-dash: linear-gradient(90deg, rgb(255,255,255) 0%, rgba(228, 231, 235, 1) 100%);
+  --team-grid-left-dash: linear-gradient(90deg, rgba(228, 231, 235, 1) 0%, rgb(255,255,255) 100%);
+  --sort-drop-downs-dash: linear-gradient(to right, rgba(0,0,0,0.8), 80%, rgba(0,0,0,0.1));
+  
+  --alt-bg-color: rgba(255, 255, 255, 0.954);
+  --alt-font-color: rgba(0, 0, 0, 0.85);
+  /* --main-font-color: #FFFFFF; */
+  /* --alt-font-color-light: rgba(0, 0, 0, 0.68); */
+  /* --theme-primary: rgb(74, 199, 81); */
+  /* --box-shadow: 2px 2px 7px -1px rgba(0, 0, 0, 0.75); */
+}
+
+.dark-mode{
+  --main-bg-color-dash: #1B203A; 
+  --grid-bg-color-dash: #272B4A;
+  /* --grid-header-bg-color-dash: rgb(246, 247, 249); */
+  --grid-header-bg-color-dash: #2e344f;
+  --teammate-card-bg-color: #2e344f;
+  --main-font-color: rgb(255, 255, 255);
+  --team-grid-right-dash: linear-gradient(90deg, #272B4A 0%, #1B203A 100%);
+  --team-grid-left-dash: linear-gradient(90deg, #1B203A 0%, #272B4A  100%);
+  --sort-drop-downs-dash: linear-gradient(to right, #1B203A, 80%, #2e344f);
+}
+
+
+
+
+
+
+
+
+.toggle-switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: var(--alt-bg-color);
+  border-radius: 20px;
+}
+
+.toggle-switch label::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--alt-font-color);
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.toggle-switch input:checked+label::after {
+  left: 20px;
+}
+
+.toggle-switch input:checked+label {
+  background-color: var(--alt-bg-color);
+}
+
+
+
+
+
+
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,7 +122,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .login {
   margin-bottom: 10px;

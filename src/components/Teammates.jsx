@@ -26,13 +26,13 @@ const Teammates = ({user_id, selectedPack, currentTeam}) => {
   }
 
   return (
-    <div className='team-col-2'>
-      <h4>Team: {currentTeam ? currentTeam.name : "No Teammates"}</h4>
-      <p>Motto: {currentTeam ? currentTeam.motto : "No Motto"} </p>
-      <div className='teammate-container'>
-        {displayTeamates()}
+    <React.Fragment>
+      <div className='team-col-3'>
+        <div className='teammate-container'>
+          {displayTeamates()}
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 

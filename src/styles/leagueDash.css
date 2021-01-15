@@ -1,10 +1,11 @@
-/* body {
-  background: blue;
+/* .App {
+  background-color: var(--main-bg-color-dash);
 } */
 
 .league-dash-container {
   display: inline-grid;
   width: 95%;
+  /* background-color: var(--main-bg-color-dash); */
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -22,8 +23,10 @@
   /* TEMP STYLES BELOW */
   /* background-color: rgba(95, 158, 160, 0.3); */
   background-color: rgba(255,255,255,0);
+  background-color: var(--grid-bg-color-dash);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin: 10px 10px 10px 0px;
+  border-radius: 10px;
   /* border-radius: 25px; */
 }
 
@@ -32,13 +35,15 @@
   height: 40vh;
   /* max-height: 60vh;
   min-height: 40vh; */
-
-
+  
+  
   /* TEMP STYLES BELOW */
   /* background-color: rgba(136, 132, 216, 0.3); */
   background-color: rgba(255,255,255,0);
+  background-color: var(--grid-bg-color-dash);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin: 10px 0px 10px 10px;
+  border-radius: 10px;
   /* border-radius: 25px; */
 }
 
@@ -47,13 +52,15 @@
   height: 40vh;
   /* max-height: 60vh;
   min-height: 40vh; */
-
+  
   
   /* TEMP STYLES BELOW */
   /* background-color: rgba(136, 132, 216, 0.3); */
-  background-color: rgba(255,255,255,0.0);
+  background-color: rgba(255,255,255,0);
+  background-color: var(--grid-bg-color-dash);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin: 10px 10px 10px 0px;
+  border-radius: 10px;
   
   /* border-radius: 25px; */
 }
@@ -63,23 +70,27 @@
   height: 40vh;
   /* max-height: 60vh;
   min-height: 40vh; */
-
+  
   /* TEMP STYLES BELOW */
   /* background-color: rgba(95, 158, 160, 0.3); */
   background-color: rgba(255,255,255,0);
+  background-color: var(--grid-bg-color-dash);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin: 10px 0px 10px 10px;
+  border-radius: 10px;
   /* border-radius: 25px; */
 }
 
 .col-5 {
   grid-column: span 8;
-
+  
   /* TEMP STYLES BELOW */
   /* background-color: rgba(136, 132, 216, 0.3); */
-  /* background-color: rgba(0,0,0,0.3); */
+  background-color: rgba(255,255,255,0);
+  background-color: var(--grid-bg-color-dash);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   margin: 10px 0px;
+  border-radius: 10px;
   /* border-radius: 25px; */
 }
 

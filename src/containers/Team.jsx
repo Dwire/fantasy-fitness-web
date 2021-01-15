@@ -51,9 +51,13 @@ class Team extends React.Component {
   render() {
     return (
       <div className='column col-3 team-container'>
-        <div className="team-left team-col-1" onClick={this.handleClick}></div>
+       <div className="team-header team-col-1">
+          <h1>Team: {this.props.currentTeam ? this.props.currentTeam.name : "No Team"}</h1>
+          <h5>Motto: {this.props.currentTeam ? this.props.currentTeam.motto : "No Motto"} </h5>
+        </div>
+        <div className="team-left team-col-2" onClick={this.handleClick}></div>
         <Teammates />
-        <div className="team-right team-col-3" onClick={this.handleClick}></div>
+        <div className="team-right team-col-4" onClick={this.handleClick}></div>
       </div>
     )
   }

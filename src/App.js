@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux'
 // import logo from './logo.svg';
 
 import './styles/App.css';
@@ -18,12 +19,20 @@ import './styles/loginSignup.css';
 
 import Routes from './routes/routes'
 
-function App() {
+function App({darkMode}) {
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? "dark-mode" : ''}`}>
       <Routes />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {darkMode: state.settings.darkMode}
+}
+
+export default connect(mapStateToProps, null)(App)
+
+
+
+// export default App;

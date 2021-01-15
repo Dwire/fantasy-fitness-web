@@ -3,12 +3,21 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {setCurrentLeague} from '../actions/leagueActions'
 import {setCurrentTeam, setAllTeams} from '../actions/teamActions'
+import {setDarkMode} from '../actions/settingActions'
 
 class SideNav extends React.Component {
   state = {
     htmlClass: "",
     myLeagues: false
   }
+
+  // GET RID OF THIS FUNCTION AND MOVE DARK MODE TO REDUX
+componentDidMount() {
+  let currentMode = window.localStorage.getItem('color')
+  this.setState({darkMode: !!currentMode})
+}
+
+
 
   handleClick = () => {
     if (this.state.htmlClass === "open"){
@@ -57,6 +66,19 @@ class SideNav extends React.Component {
     this.props.setAllTeams(allTeams)
   }
 
+  toggleDarkMode = (e) => {
+    console.log(e);
+    console.log(e.target.checked);
+    // this.setLocalStorage() 
+    if (e.target.checked) {
+      window.localStorage.setItem('color', 'dark-mode')
+      this.props.setDarkMode(e.target.checked)
+    }else{
+      window.localStorage.setItem('color', '')
+      this.props.setDarkMode(e.target.checked)
+    }
+    
+  }
 
 
   render(){
@@ -65,6 +87,10 @@ class SideNav extends React.Component {
       
         <header>
           <p onClick={this.handleClick} className= {"menu collapse " + this.state.htmlClass}><span></span></p>
+          <div className="toggle-switch" onChange={this.toggleDarkMode}>
+            <input type="checkbox"  id="toggle-dark-mode" checked={this.props.darkMode} />
+            <label htmlFor="toggle-dark-mode"></label>
+          </div>
         </header>
         <aside className={"slidenav " + this.state.htmlClass} >
           <nav>
@@ -97,8 +123,9 @@ class SideNav extends React.Component {
 const mapStateToProps = state => {
   return {
     allLeagues: state.leagues.allLeagues,
-    user: state.user
+    user: state.user,
+    darkMode: state.settings.darkMode
   }
 }
 
-export default connect(mapStateToProps, {setCurrentLeague, setCurrentTeam, setAllTeams})(SideNav)
+export default connect(mapStateToProps, {setCurrentLeague, setCurrentTeam, setAllTeams, setDarkMode})(SideNav)

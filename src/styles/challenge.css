@@ -4,7 +4,7 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
+  
   height: 80px;
 }
 
@@ -12,6 +12,12 @@
   grid-area: 1 / 1 / 2 / 3;
   font-size: 30px;
   line-height: 80px;
+  background-color: var(--grid-header-bg-color-dash);
+  border-radius: 10px 0px 0px 0px;
+}
+
+p.header-left {
+  margin: 0;
 }
 
 .header-left:hover {
@@ -22,20 +28,20 @@
   grid-area: 1 / 3 / 2 / 11; 
   padding-top: 5px;
   /* border: 1px solid black; */
+  color: var(--main-font-color);
+  background-color: var(--grid-header-bg-color-dash);
 }
 
-.header-center h1 {
-  margin: 10px 0px;
-}
-.header-center h3 {
-  margin: 0px;
-}
+.header-center h1 {margin: 0 0 10px 0;}
+.header-center h3 {margin: 0px;}
 
 
 .header-right {
   grid-area: 1 / 11 / 2 / 13;
   font-size: 30px;
   line-height: 80px;
+  background-color: var(--grid-header-bg-color-dash);
+  border-radius: 0px 10px 0px 0px;
 }
 
 .header-right:hover {
@@ -69,13 +75,15 @@
   font-weight: 700;
   font-size: 1.5em;
   margin-bottom: 20px;
+  color: var(--main-font-color);
 }
 
 .challenge-dropdown {
   width: 100%;
   text-align: center;
   background-color: black;
-  background: linear-gradient(to right, rgba(0,0,0,0.8), 80%, rgba(0,0,0,0.1));
+  /* background: linear-gradient(to right, rgba(0,0,0,0.8), 80%, rgba(0,0,0,0.1)); */
+  background: var(--sort-drop-downs-dash);
   color: white;
   border: none;
   padding: 8px;

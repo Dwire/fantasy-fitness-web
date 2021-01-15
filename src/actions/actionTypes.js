@@ -29,6 +29,9 @@ export const SET_DISPLAY_PACK_ID = 'SET_DISPLAY_PACK_ID'
 export const SET_DROPDOWN_OPTION = 'SET_DROPDOWN_OPTION'
 export const CLEAR_FILTERS = 'CLEAR_FILTERS'
 
+// Settings Reducer
+export const SET_DARK_MODE = 'SET_DARK_MODE'
+
 
 // BookClub Reducer
 // export const SET_BOOK_CLUB = 'SET_BOOK_CLUB'

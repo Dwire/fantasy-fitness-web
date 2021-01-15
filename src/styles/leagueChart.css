@@ -2,33 +2,44 @@
   min-height: 250px;
 }
 
-  .league-charts {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .chart-header-left { 
-      grid-area: 1 / 1 / 2 / 2; 
-      font-size: 30px;
-    }
+.league-charts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
 
-    .chart-header-left:hover {
-      cursor: pointer;
-    }
+.chart-header-left { 
+  grid-area: 1 / 1 / 2 / 2; 
+  font-size: 30px;
+  border-radius: 10px 0 0 0;
+  background-color: var(--grid-header-bg-color-dash);
+}
 
-    .chart-header { grid-area: 1 / 2 / 2 / 5; }
+p.chart-header-left {margin: 0}
 
-    .chart-header-right { 
-      grid-area: 1 / 5 / 2 / 6; 
-      font-size: 30px;
-    }
-    .chart-header-right:hover {
-      cursor: pointer;
-    }
+.chart-header-left:hover {
+  cursor: pointer;
+}
 
-    .chart-graph { grid-area: 2 / 1 / 9 / 6; }
+.chart-header { 
+  color: var(--main-font-color);
+  grid-area: 1 / 2 / 2 / 5; 
+  background-color: var(--grid-header-bg-color-dash);
+}
+
+.chart-header-right { 
+  grid-area: 1 / 5 / 2 / 6; 
+  font-size: 30px;
+  border-radius: 0 10px 0 0;
+  background-color: var(--grid-header-bg-color-dash);
+}
+p.chart-header-right {margin: 0}
+.chart-header-right:hover {
+  cursor: pointer;
+}
+
+.chart-graph { grid-area: 2 / 1 / 9 / 6; }
 
   

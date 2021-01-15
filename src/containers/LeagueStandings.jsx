@@ -45,9 +45,7 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearF
 
   return (
     <div className='column col-1 league-charts'>
-      <div>
        <p className='chart-header-right' onClick={change_chart_view}>▶</p>
-      </div>
       <div className="chart-header">
         <h1>Standings ({chartView === "allTime" ? "All Time" : "Week"})</h1>
       </div>
