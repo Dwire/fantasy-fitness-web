@@ -8,7 +8,7 @@ const Highlight = () => {
         <p>Last week team champs</p>
         <p>Flash Challenge Reminder</p>
 
-      <h2>...comming soon</h2>
+      <h2>...coming soon</h2>
     </div>
   )
 }
