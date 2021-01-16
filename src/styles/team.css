@@ -3,6 +3,7 @@
   display: inline-grid;
   width: 100%;
   /* overflow: auto;  */
+  min-height: 300px;
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -53,7 +54,7 @@
   min-width: 110px;
   min-height: 150px;
   /* min-height: 250px; */
-  height: 90%;
+  height: 100%;
   color: var(--main-font-color);
   /* font-size: 30px; */
   font-size: 1.1vw
@@ -64,6 +65,7 @@
 
 .teammate-card img {
   max-width: 50%;
+  max-height: 40%;
 }
 
 .teammate-card h5 {

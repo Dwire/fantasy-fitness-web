@@ -1,6 +1,7 @@
 .col-4 {
   /* border: 1px solid green; */
   /* position: relative; */
+  min-height: 300px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -25,6 +26,7 @@
   /* border: 2px solid black; */
   /* min-height: 40vh;
   max-height: 60vh; */
+
   height: auto;
   grid-area: 3 / 1 / 12 / 10;
 }
