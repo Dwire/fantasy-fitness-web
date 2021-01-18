@@ -14,7 +14,7 @@ import teamCelibrateImg from '../assets/images/team_celibrate.png'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="home-page-main-section">
       <div className='home-banner'>
         <img className="home-banner-image" src={wwcBanner} alt="banner"/>
       </div>

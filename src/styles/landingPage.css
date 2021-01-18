@@ -3,6 +3,11 @@
   height: 100vh;
 }
 
+.home-page-main-section {
+ background-color: var(--main-bg-color-dash);
+ color: var(--main-font-color);
+}
+
 .home-page p {
   /* background-color: rgba(54, 182, 252, 0.2); */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
