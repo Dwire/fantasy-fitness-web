@@ -11,16 +11,20 @@ const ChallengeCenter = ({selectedPack, currentTeam, displayPackId, leaguePacks,
   const displayChallenges = () => {
     if (!!displayPackId){
       const pack = leaguePacks.find(pack => pack.id === displayPackId)
+      
+      let selectedPackIndex =  leaguePacks.findIndex(pack => pack.id === selectedPack.id)
+      let packIndex =  leaguePacks.findIndex(p => p.id === pack.id)
 
       if (pack.id === selectedPack.id ){
         // return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
         return packFilter(pack).map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} />)
-      }else if (leaguePacks.indexOf(pack) > leaguePacks.indexOf(selectedPack)){
+      }else if (packIndex > selectedPackIndex){
         // return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="afterCurrentPack"/>)
         return packFilter(pack).map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="afterCurrentPack"/>)
       }else{
+        // debugger
         // return pack.workouts.map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="beforCurrentPack"/>)
-        return packFilter(pack).map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="beforCurrentPack"/>)
+        return packFilter(pack).map(workout => <ChallengeCard challenge={mapWorkoutToCompletion(workout)} visible="beforeCurrentPack"/>)
       }
     }
   }
