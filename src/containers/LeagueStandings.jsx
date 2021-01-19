@@ -45,11 +45,13 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearF
 
   return (
     <div className='column col-1 league-charts'>
-       {/* <p className='chart-header-right' onClick={change_chart_view}>▶</p> */}
+       <p className='chart-header-right' onClick={change_chart_view}>▶</p>
+       {/* <p className='chart-header-right'></p> */}
       <div className="chart-header">
         <h1>Standings ({chartView === "allTime" ? "All Time" : "Week"})</h1>
       </div>
-      {/* <p className='chart-header-left' onClick={change_chart_view}>◀</p> */}
+      <p className='chart-header-left' onClick={change_chart_view}>◀</p>
+      {/* <p className='chart-header-left'></p> */}
         <ResponsiveContainer className={'chart-graph'}>
           <BarChart 
             className='bar-chart' 

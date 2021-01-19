@@ -1,6 +1,6 @@
 import { SET_LOGIN, SET_INITIAL_STATE, SET_CHART_VIEW } from '../actions/actionTypes'
 
-const sessionsState = {loggedIn: false, chartView: 'allTime'}
+const sessionsState = {loggedIn: false, chartView: 'week'}
 
 const sessionsReducer = (state = sessionsState, action) => {
   switch (action.type) {
