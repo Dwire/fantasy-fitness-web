@@ -1,8 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
   publish = "build"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
 
 [build.environment]
   NODE_VERSION = "16.20.2"
   NODE_OPTIONS = "--openssl-legacy-provider"
-  NPM_FLAGS = "--legacy-peer-deps"
+  NPM_VERSION = "8.19.4"
