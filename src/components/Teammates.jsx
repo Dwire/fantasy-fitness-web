@@ -3,18 +3,18 @@ import {connect} from 'react-redux'
 import TeammateCard from './TeammateCard'
 
 const Teammates = ({user_id, selectedPack, currentTeam}) => {
-  
+
   // const prioritizeMyTeam = () => {
   //   teams.find(team => {
-      
+
   //   })
-    
-    
+
+
   // }
 
-  const unclaimedWorkouts = () => {
-    return selectedPack.workouts.filter(wo => wo.status !== 'open' || !wo.status)
-  }
+  // const unclaimedWorkouts = () => {
+  //   return selectedPack.workouts.filter(wo => wo.status !== 'open' || !wo.status)
+  // }
 
   const displayTeamates = () => {
     // prioritizeMyTeam() --- Prioritize your team rather then just grabbing 0 index below
