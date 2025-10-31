@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setChartView} from '../actions/sessionActions'
-import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts'
+import {BarChart, XAxis, YAxis, Tooltip, Bar, ResponsiveContainer } from 'recharts'
 import {setCurrentTeam} from '../actions/teamActions'
 import {clearFilters} from '../actions/formActions'
 
@@ -9,7 +9,7 @@ import {clearFilters} from '../actions/formActions'
 
 
 const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearFilters}) => {
-  
+
   const team_total_completions = () => {
     return teams.map(team => completion_info(team))
   }
@@ -31,7 +31,7 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearF
         completed: team.week_completions.filter(comp => comp.status === 'completed').length,
       }
     }
-  } 
+  }
 
   const change_chart_view = () => {
     chartView === "allTime" ? setChartView("week") : setChartView("allTime")
@@ -53,9 +53,9 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearF
       <p className='chart-header-left' onClick={change_chart_view}>◀</p>
       {/* <p className='chart-header-left'></p> */}
         <ResponsiveContainer className={'chart-graph'}>
-          <BarChart 
-            className='bar-chart' 
-            margin={{ top: 5, right: 30, left: 0, bottom: 5 }} 
+          <BarChart
+            className='bar-chart'
+            margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
             data={team_total_completions()}>
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
             <XAxis dataKey="name" />
@@ -74,7 +74,7 @@ const LeagueStandings = ({teams, chartView, setChartView, setCurrentTeam, clearF
 
 const mapStateToProps = (state) => {
   console.log("STATE", state);
-  
+
   return {
     teams: state.teams.allTeams,
     chartView: state.session.chartView

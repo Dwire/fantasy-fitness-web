@@ -6,6 +6,8 @@
 - Node 20.18.1 configured in netlify.toml and .nvmrc
 - NODE_OPTIONS --openssl-legacy-provider not compatible with Node 20+
 - Build command: `npm install && npm run build`
+- CI treats warnings as errors - all ESLint warnings must be fixed
+- Common fixes: remove unused vars, replace `<a href="#">` with `<button type="button">`, use className not class
 
 ## React Router Configuration
 

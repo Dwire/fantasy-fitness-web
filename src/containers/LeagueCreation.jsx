@@ -195,14 +195,14 @@ class LeagueCreation extends React.Component {
     return (
       <div>
           <SideNav />
-        <ul class="breadcrumb">
-          <li><a href="#">Create League</a></li>
-          <li><a href="#">Add Workout Packs</a></li>
-          <li><a href="#">Add Players</a></li>
+        <ul className="breadcrumb">
+          <li><button type="button">Create League</button></li>
+          <li><button type="button">Add Workout Packs</button></li>
+          <li><button type="button">Add Players</button></li>
           <li>LFG!!!</li>
         </ul>
 
-        <div class="creation-container" >
+        <div className="creation-container" >
           {this.displayForms()}
         </div>
 
