@@ -14,6 +14,10 @@
 - Main router setup in `src/index.js` with `<BrowserRouter>`
 - Route definitions in `src/routes/routes.js` using `<Routes>` (aliased as Switch)
 - App component renders Routes directly, no Route wrapper needed in index.js
+- **CRITICAL**: RoutesComponent in routes.js must NOT be wrapped with withRouter()
+  - withRouter uses hooks that require Router context
+  - RoutesComponent contains <Routes> itself, creating circular dependency
+  - Only wrap route component children with withRouter if they need router props
 
 ## Project Structure
 

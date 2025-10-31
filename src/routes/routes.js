@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes as Switch } from 'react-router-dom';
-import { withRouter } from '../hocs/withRouter';
 
 // import Login from '../containers/landing/Login'
 // import Register from '../containers/landing/Register'
@@ -36,4 +35,4 @@ class RoutesComponent extends React.Component {
   }
 }
 
-export default withRouter(RoutesComponent)
+export default RoutesComponent
