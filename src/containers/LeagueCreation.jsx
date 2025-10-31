@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router'
+import { withRouter } from '../hocs/withRouter'
 
 import AddLeague from '../components/AddLeague'
 import AddPacksToLeague from '../components/AddPacksToLeague'
@@ -97,7 +97,7 @@ class LeagueCreation extends React.Component {
     this.createLeagueRequest()
     // createleage
     //? with return value set state
-    // create leagePacks 
+    // create leagePacks
     //? with return value set state
     // create teams at random
 
@@ -112,7 +112,7 @@ class LeagueCreation extends React.Component {
   createLeaguePacksRequest = (league) => {
     let packDataArray = this.state.selectedPacks.map((pack, i) => {
       return {pack_id: pack.id, week: i + 1, league_id: league.league.id}
-    }) 
+    })
 
     let fomatedPackData = {packs: packDataArray}
 
@@ -123,7 +123,7 @@ class LeagueCreation extends React.Component {
   createLeaguePlayersRequest = (entireLeagueData) => {
     const formated_data = {users: this.state.players, league_id: entireLeagueData.id}
     const token = localStorage.getItem('jwt')
-    
+
     userTeamAdapter.randomize(formated_data, token)
     .then(this.updateUserDefaultTeam)
     // .then(this.setLeagues)
@@ -149,7 +149,7 @@ class LeagueCreation extends React.Component {
   // setTeams = (newCurrentLeague) => {
   //   let allTeams = newCurrentLeague.teams
   //   let newCurrentTeam = this.props.allTeams.find(team => team.teammates.find(teammate => teammate.id === parseInt(this.props.user.id)))
-    
+
   //   this.props.setCurrentTeam(newCurrentTeam)
   //   this.props.setAllTeams(allTeams)
 
@@ -160,28 +160,28 @@ class LeagueCreation extends React.Component {
   displayForms = () => {
     switch (this.state.form) {
       case 'addLeague':
-        return <AddLeague 
-        handleNext={this.handleNext} 
-        handleLeageInputChange={this.handleLeageInputChange} 
+        return <AddLeague
+        handleNext={this.handleNext}
+        handleLeageInputChange={this.handleLeageInputChange}
         league={this.state.league}
         />
       case 'addPacks':
-        return <AddPacksToLeague 
+        return <AddPacksToLeague
         handlePackSelection={this.handlePackSelection}
-        handleNext={this.handleNext} 
-        handleBack={this.handleBack} 
+        handleNext={this.handleNext}
+        handleBack={this.handleBack}
         selectionComplete={this.state.selectionComplete}
         selectedPacks={this.state.selectedPacks}
         leagueInfo={this.state.league}
         />
       case 'addPlayers':
-        return <AddPlayersToLeague 
+        return <AddPlayersToLeague
         createLeagueBtn={this.createLeagueBtn}
         handleBack={this.handleBack}
         handleCurrentPlayerInputChange={this.handleCurrentPlayerInputChange}
         handleCurrentPlayerAdd={this.handleCurrentPlayerAdd}
-        players={this.state.players} 
-        currentPlayer={this.state.currentPlayer} 
+        players={this.state.players}
+        currentPlayer={this.state.currentPlayer}
         />
       default:
         return <AddLeague />
@@ -191,7 +191,7 @@ class LeagueCreation extends React.Component {
 
   render() {
     console.log("nice", this.state);
-    
+
     return (
       <div>
           <SideNav />

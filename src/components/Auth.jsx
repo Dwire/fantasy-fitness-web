@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 import Login from './Login'
 import Signup from './Signup'
@@ -52,28 +52,28 @@ class Auth extends React.Component {
 
   handleAuthRender = () => {
     if (this.state.login){
-      return <Login handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state.user} handleFormSelection={this.handleFormSelection} /> 
+      return <Login handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state.user} handleFormSelection={this.handleFormSelection} />
     }else{
       return <Signup handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state.user} handleFormSelection={this.handleFormSelection} />
     }
-        
+
   }
 
   render() {
     console.log(this.state);
     console.log("LogIn", this.props.loggedIn);
-    
+
     return (
       <React.Fragment >
-        {localStorage.getItem('jwt') || this.props.loggedIn ? 
-          <Redirect to="/dashboard" />  
+        {localStorage.getItem('jwt') || this.props.loggedIn ?
+          <Navigate to="/dashboard" replace />
         :
           this.handleAuthRender()
-        } 
+        }
       </React.Fragment>
     )
   }
-} 
+}
 
 const mapStateToProps = state => {
   return {loggedIn: state.session.loggedIn}

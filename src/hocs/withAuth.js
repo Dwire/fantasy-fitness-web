@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import sessionsAdapter from '../adapters/sessionAdapter';
 import {setInitialState} from '../actions/sessionActions';
@@ -38,7 +38,7 @@ const withAuth = WrappedComponent => {
         return this.props.loggedIn ? (
           <WrappedComponent {...this.props} />
         ) : (
-          <Redirect to="/auth" />
+          <Navigate to="/auth" replace />
         );
       } else {
         return null;

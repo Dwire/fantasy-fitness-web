@@ -1,3 +1,53 @@
+# Fantasy Fitness Web
+
+A React-based fantasy fitness league application where users can create leagues, track workouts, and compete with teammates.
+
+## Architecture
+
+**Frontend Stack:**
+
+- React 18.3.1 with Redux for state management
+- React Router v7.9.4 for navigation
+- Semantic UI React for components
+- Recharts for data visualization
+
+**Key Patterns:**
+
+- Redux with thunk middleware for async actions
+- Adapter pattern for API communication
+- HOC pattern for routing and authentication
+- Class components with functional HOCs
+
+## Project Structure
+
+```
+src/
+├── actions/          # Redux action creators
+├── adapters/         # API communication layer
+│   └── baseConfig.js # Axios configuration
+├── components/       # Presentational components
+├── containers/       # Container/page components
+├── hocs/            # Higher-order components
+│   ├── withAuth.js  # Authentication wrapper
+│   └── withRouter.js # Router props wrapper
+├── reducers/        # Redux reducers
+├── routes/          # Route definitions
+│   └── routes.js    # Main routing component
+├── store/           # Redux store configuration
+├── styles/          # CSS files per feature
+└── App.js           # Main app component
+```
+
+## Key Files
+
+- **src/index.js** - Application entry point, sets up Router and Redux Provider
+- **src/App.js** - Main app wrapper, renders Routes
+- **src/routes/routes.js** - Route definitions using React Router v6+ syntax
+- **src/store/store.js** - Redux store configuration
+- **src/adapters/baseConfig.js** - Axios base configuration for API calls
+
+## Getting Started
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

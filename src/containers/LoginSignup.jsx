@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 import Signup from '../components/Signup'
 import Login from '../components/Login'
@@ -46,12 +46,12 @@ class LoginSignup extends Component {
       .then(this.handle_login_response)
     }
   }
-  
+
   handle_login_response = (response) => {
     if (!!response.user) {
-      this.setLocalStorage(response) 
+      this.setLocalStorage(response)
     }else{
-      // clearing local storage is probably not necissary in the long run but will fix an issue current users 
+      // clearing local storage is probably not necissary in the long run but will fix an issue current users
       // who already put in bad info are having.
       window.localStorage.clear()
       this.setState({error: "Username or Password was incorrect. Please try again"})
@@ -68,7 +68,7 @@ class LoginSignup extends Component {
 
   render() {
     console.log(this.state.user);
-    
+
     return (
       <section className="user">
         <div className="user_options-container">
@@ -85,25 +85,25 @@ class LoginSignup extends Component {
               <button className="user_registered-login" id="login-button" onClick={() => this.handleBounce('bounceRight')}>Login</button>
             </div>
           </div>
-          
+
           <div className={`user_options-forms ${this.state.bounce}`} id="user_options-forms">
 
-          {localStorage.getItem('jwt') || this.props.loggedIn ? 
-            <Redirect to="/dashboard" />  
+          {localStorage.getItem('jwt') || this.props.loggedIn ?
+            <Navigate to="/dashboard" replace />
             :
             <React.Fragment>
-              <Signup 
-                handleSubmit={this.handleSubmit} 
-                handleChange={this.handleChange} 
-                userInfo={this.state.user} 
+              <Signup
+                handleSubmit={this.handleSubmit}
+                handleChange={this.handleChange}
+                userInfo={this.state.user}
                 error={this.state.error}/>
-              <Login 
-                handleSubmit={this.handleSubmit} 
+              <Login
+                handleSubmit={this.handleSubmit}
                 handleChange={this.handleChange}
                 userInfo={this.state.user}
                 error={this.state.error}/>
             </React.Fragment>
-          } 
+          }
           </div>
         </div>
       </section>
