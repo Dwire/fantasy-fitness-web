@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter, Route, Switch } from 'react-router-dom';
+import { Route, Routes as Switch } from 'react-router-dom';
 
 // import Login from '../containers/landing/Login'
 // import Register from '../containers/landing/Register'
@@ -16,23 +16,23 @@ import DevList from '../containers/DevList'
 
 // import EditProfileForm from '../components/EditProfileForm'
 
-class Routes extends React.Component {
+class RoutesComponent extends React.Component {
   render(){
     return (
       <Switch>
-        {/* <Route exact path="/" component={SplashPage} /> */}
-        {/* <Route exact path="/sessions" component={Sessions} /> */}
-        {/* <Route exact path="/login" component={Login} /> */}
-        {/* <Route exact path="/register" component={Register} /> */}
-        <Route exact path="/league_creation" component={LeagueCreation} />
-        <Route path="/dashboard" component={LeagueDash} />
-        <Route path="/auth" component={LoginSignup} />
-        <Route path="/dev_list" component={DevList} />
-        <Route path="/" component={LandingPage} />
-        {/* <Route path="/auth" component={LoginSignup} /> */}
+        {/* <Route path="/" element={<SplashPage />} /> */}
+        {/* <Route path="/sessions" element={<Sessions />} /> */}
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/league_creation" element={<LeagueCreation />} />
+        <Route path="/dashboard/*" element={<LeagueDash />} />
+        <Route path="/auth" element={<LoginSignup />} />
+        <Route path="/dev_list" element={<DevList />} />
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/auth" element={<LoginSignup />} /> */}
       </Switch>
     )
   }
 }
 
-export default withRouter(Routes)
+export default RoutesComponent
